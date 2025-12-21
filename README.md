@@ -1,6 +1,6 @@
 # Rain-Washed Sky - Obsidian Theme
 
-![Rain Washed Sky](./rain-washed_sky.png)
+![Rain Washed Sky](./rain-washed_sky_high_res.png)
 
 > "The rain passes, the clouds break, and the sky is the color of the day."  
 > (雨過天青雲破處，這般顏色做將來)
