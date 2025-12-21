@@ -1,0 +1,968 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Noto+Serif+TC:wght@300;400;700&family=PT+Serif:wght@400;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,700&display=swap');
+
+/* ===============================================================
+   1. User Color Palette
+   =============================================================== */
+
+/* --- ☀️ 淺色模式：汝窯為體，青花為用 --- */
+.theme-light {
+  /* === 基底 === */
+  --user-bg-white:        #F2F7F7;
+  --user-bg-pink-pale:    #E6F0F0;
+  --user-bg-pink-soft:    #DEEBEB;
+  --user-bg-pink-deep:    #D1E3E3;
+  --user-bg-blockquote:   #e0f0f0;
+  --user-active-line:     #e5eded99;
+
+  /* === 文字與粗體 === */
+  --user-text-main:       #2c3e50;
+  --user-text-muted:      #5D7290;
+  --user-text-faint:      #8FA4C4;
+  /* 粗體：使用深邃的普魯士藍 */
+  --user-text-bold:       #1A2F45; 
+
+  /* === 標題漸層 (青花濃淡) === */
+  --h1-gradient:          #1C4E80; /* 濃豔蘇麻離青 */
+  --h2-gradient:          #346c9c; /* 中調青花 */
+  --h3-gradient:          #5D8AA8; /* 淺調藍灰 */
+
+  /* === 強調與連結 === */
+  --user-accent-main:     #346c9c;
+  --user-accent-strong:   #B22222; /* 釉裡紅 (僅用於強調/警示) */
+  --user-accent-highlight:#FAEBD7;
+
+  --user-link-internal:   #4c9677;
+  --user-link-external:   #4A90E2;
+
+  /* === 介面 === */
+  --user-border-light:    #B0C4C4;
+  --user-selection:       rgba(255, 213, 0, 0.4);
+
+  /* === Callout === */
+  --user-accent-tip:      #74bfbb;
+  --user-accent-success:  #6B8E23;
+  --user-accent-warning:  #D4AF37;
+  --user-accent-info:     #53789E;
+  --user-accent-error:    #B22222;
+  --user-accent-quote:    #929292;
+  --user-accent-example:  #6A5ACD;
+  --user-accent-background: #9B59B6;
+  --user-callout-title:   #000000;
+
+  --user-theme-pop:       #E0806C;
+
+  --shadow-layer-1: rgba(0, 0, 0, 0.08);
+  --shadow-layer-2: rgba(0, 0, 0, 0.04);
+
+  /* --- 3D 浮動陰影 (汝窯溫潤感) --- */
+  --float-highlight: inset 0 1.5px 0 0 rgba(255, 255, 255, 0.7);
+  --float-lowlight: inset 0 -1px 0 0 rgba(0, 0, 0, 0.05);
+  --float-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.06); 
+  --float-shadow-2: 0 3px 6px -2px rgba(28, 78, 128, 0.15);
+
+  /* HSL 轉換結果：色相 0 (紅), 飽和度 68%, 亮度 42% */
+  --accent-h: 0;
+  --accent-s: 68%;
+  --accent-l: 42%;
+  
+  /* 重新宣告以確保生效 */
+  --interactive-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --interactive-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 5%));
+
+  /* inline-code 樣式 */
+  --user-inline-code-bg: rgba(0, 0, 0, 0.06);
+  --user-inline-code-text: #B31D1D;
+
+  /* --color-accent-1: #4C97DB; /* 會直接蓋到某些樣式的顏色 */
+
+/* 文字：使用飽和的赤紅/鐵鏽紅，對比背景的青藍色 */
+  --user-tag-color:            #C0392B; 
+  /* Hover 文字：轉為更鮮豔的胭脂紅 */
+  --user-tag-color-hover:      #E74C3C;
+  
+  /* 背景：帶有粉橘調的淺紅，像宣紙上的硃砂暈染 */
+  --user-tag-background:       #FADBD8; 
+  /* Hover 背景：加強飽和度，變成溫暖的杏桃色 */
+  --user-tag-background-hover: #F5CBA7;
+}
+
+/* --- 🌙 深色模式：青花為海，汝瓷為星 --- */
+.theme-dark {
+  /* === 基底 === */
+  --user-bg-white:        #0F1626;
+  --user-bg-pink-pale:    #162138;
+  --user-bg-pink-soft:    #1C2945;
+  --user-bg-pink-deep:    #253555;
+  --user-bg-blockquote:   #2b3952;
+  --user-active-line:     #17213a;
+
+  /* === 文字 === */
+  --user-text-main:       #F0F8FF;
+  --user-text-muted:      #C0D4D4;
+  --user-text-faint:      #5F7A7A;
+  --user-text-bold:       #DCD0B3; /* 流沙金 */
+
+  /* === 標題漸層 === */
+  --h1-gradient:          #8CD1D1;
+  --h2-gradient:          #7CC4C4;
+  --h3-gradient:          #6DB7B7;
+
+  /* === 強調與連結 === */
+  --user-accent-main:     #7CC5C5;
+  --user-accent-strong:   #8A0908;
+  --user-accent-highlight:#2F4F4F;
+
+  --user-link-internal:   #A2D99E;
+  --user-link-external:   #6495ED;
+
+  /* === 介面 === */
+  --user-border-light:    #3A5F5F;
+  --user-selection:       rgba(255, 213, 0, 0.4);
+
+  /* === Callout 專用色系 (新增/深色適配) === */
+  --user-accent-tip:      #55e9cc;
+  --user-accent-success:  #538731;
+  --user-accent-warning:  rgb(255, 149, 20);
+  --user-accent-info:     #1A6598;
+  --user-accent-error:    #f32f2f;
+  --user-accent-quote:    #d2d0d0;
+  --user-accent-example:  #9370DB;
+  --user-accent-background: #AF7AC5;
+  --user-callout-title:   #FFFFFF;
+
+  --user-theme-pop:       #FF9E8B;
+
+  --shadow-layer-1: rgba(130, 209, 209, 0.15);
+  --shadow-layer-2: rgba(0, 0, 0, 0.5);
+
+  --float-highlight: inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+  --float-lowlight: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
+  --float-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.4); 
+  --float-shadow-2: 0 4px 8px -2px rgba(0, 0, 0, 0.5);
+
+  /* HSL 轉換結果：色相 359 (紅), 飽和度 89%, 亮度 29% */
+  --accent-h: 359;
+  --accent-s: 89%;
+  --accent-l: 29%; 
+
+  /* ⚠️ 注意：亮度 29% 在深色背景下可能略顯黯淡
+     如果不夠明顯，可以試著把上面的 --accent-l 改成 40% 或 50% */
+
+  /* 重新宣告以確保生效 */
+  --interactive-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --interactive-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 5%));
+
+  --user-inline-code-bg: var(--user-bg-pink-deep);
+  --user-inline-code-text: #FF7878;
+
+  /* --color-accent-1: #4C97DB; /* 會直接蓋到某些樣式的顏色 */
+
+/* 文字：明亮的琥珀金，在深色背景極為突出 */
+  --user-tag-color:            #FFD700;
+  /* Hover 文字：轉為更暖的橙金色，增加熱度感 */
+  --user-tag-color-hover:      #FFC300;
+
+  /* 背景：使用半透明的深棕金色，模擬金漆底色 */
+  --user-tag-background:       rgba(255, 215, 0, 0.15);
+  /* Hover 背景：提高亮度和不透明度，產生光暈感 */
+  --user-tag-background-hover: rgba(255, 215, 0, 0.25);
+}
+
+/* ===============================================================
+   2. 核心系統變數對應 (System Mappings)
+   =============================================================== */
+body {
+  /* --- 標題顏色 --- */
+  --h1-color: var(--h1-gradient);
+  --h2-color: var(--h2-gradient);
+  --h3-color: var(--h3-gradient);
+  --h4-color: var(--user-text-muted);
+  --h5-color: var(--user-text-muted);
+  --h6-color: var(--user-text-faint);
+
+  /* --- 連結與背景 --- */
+  --link-color:           var(--user-link-internal);
+  --link-external-color:  var(--user-link-external);
+  --background-primary:       var(--user-bg-white);
+  --background-primary-alt:   var(--user-bg-pink-pale); 
+  --background-secondary:     var(--user-bg-pink-soft);
+  --background-secondary-alt: var(--user-bg-pink-deep);
+
+  /* --- 介面 --- */
+  --titlebar-background:          var(--user-bg-pink-soft);
+  --titlebar-background-focused:  var(--user-bg-pink-soft);
+  --ribbon-background:            var(--user-bg-pink-soft);
+  --ribbon-background-collapsed:  var(--user-bg-pink-soft);
+  --tab-container-background:     var(--user-bg-pink-soft);
+
+  --scrollbar-bg: transparent;
+  --scrollbar-thumb-bg: var(--user-accent-main);
+
+  /* --- 文字 --- */
+  --text-normal: var(--user-text-main);
+  --text-muted:  var(--user-text-muted);
+  --text-faint:  var(--user-text-faint);
+
+  /* --- 互動 --- */
+  --text-selection:           var(--user-selection) !important;
+  --text-highlight-bg:        var(--user-accent-highlight);
+
+  /* --- 邊框 --- */
+  --background-modifier-border:       var(--user-border-light);
+  --background-modifier-border-hover: var(--user-accent-main);
+
+  /* --- 當前編輯行 --- */
+  .markdown-source-view.mod-cm6 .cm-line.cm-active {
+    background-color: var(--user-active-line) !important;
+    border-radius: 4px;
+  }
+
+  /* --- 連結與列表 --- */
+  --link-external-decoration: none;
+  --link-decoration: none;
+
+  /* checklist */
+  --checklist-done-decoration: none; /* 去除勾選後的 line-through */
+  --checklist-done-color: var(--text-normal); /* 勾選後維持原樣 */
+
+  --radius-sm: 12px; /* --- 基礎設定與圓角 --- */
+  --font-medium: 550; /* 中等字重 */
+    
+  /* --- Blockquotes 變數 (用於浮動卡片效果) --- */
+  --blockquote-border-thickness: 0; /* 移除左側邊框 */
+
+  --embed-border-start: none;
+  --embed-padding: 0 1.25em 0 0;
+
+  /* --- Tags 樣式 --- */
+  --tag-color: var(--user-tag-color);
+  --tag-color-hover: var(--user-tag-color-hover);
+  --tag-background: var(--user-tag-background);
+  --tag-background-hover: var(--user-tag-background-hover);
+}
+
+/* =================================================================
+   3. 元素樣式覆蓋 (Element Overrides)
+   ================================================================= */
+
+/* 粗體字 (Bold) */
+strong, b, .cm-strong {
+  color: var(--user-text-bold) !important;
+  font-weight: 600;
+}
+
+/* 列表 (Lists) */
+.list-bullet:after,
+.cm-formatting-list-ul {
+  color: var(--user-accent-main) !important;
+}
+.cm-formatting-list-ol {
+  color: var(--user-accent-main) !important;
+}
+ol > li::marker {
+  color: var(--user-accent-main) !important;
+  font-weight: bold;
+}
+
+/* 連結懸停 */
+a:hover, .internal-link:hover, .external-link:hover, .cm-link:hover, .cm-url:hover {
+  background-color: var(--user-bg-pink-pale);
+  text-decoration: none;
+}
+
+/* Tags & Marks */
+.tag, .cm-hashtag {
+  background-color: var(--user-tag-background) !important;
+  color: var(--user-tag-color) !important;
+}
+mark {
+  background-color: var(--user-tag-background);
+  color: var(--user-tag-color);
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+  border-color: var(--user-accent-main);
+  appearance: none; 
+  -webkit-appearance: none;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+}
+input[type="checkbox"]:checked {
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 2px var(--user-bg-white);
+}
+
+/* 去除 external-link 的 icon */
+.external-link {
+  background-image: none;
+  padding-right: 0px;
+}
+
+/* ===============================================================
+   4. 程式碼與表格
+   =============================================================== */
+.markdown-preview-view pre code,
+.cm-s-obsidian pre.HyperMD-codeblock {
+  background-color: var(--user-bg-pink-pale) !important;
+  color: var(--user-text-main) !important;
+  border: 1px solid var(--user-bg-pink-deep);
+}
+
+.markdown-preview-view table {
+  border-color: var(--user-border-light);
+}
+.markdown-preview-view table thead tr > th {
+  background-color: var(--user-bg-pink-deep);
+  color: var(--user-text-main);
+  border-bottom-color: var(--user-accent-main);
+}
+.markdown-preview-view table tbody tr:nth-child(even) {
+  background-color: var(--user-bg-pink-pale);
+}
+
+/* ===============================================================
+   5. 介面微調 & Scrollbar
+   =============================================================== */
+.nav-file-title.is-active,
+.nav-file-title:hover {
+  background-color: var(--user-bg-pink-pale);
+  box-shadow: inset 4px 0 0 0 var(--user-accent-strong);
+}
+
+.collapse-icon {
+  color: var(--user-theme-pop) !important;
+}
+
+/* Scrollbar */
+/* remove scrollbar styling in MacOS */
+/* ::-webkit-scrollbar {
+  width: 10px;
+  height: 6px;
+  background-color: transparent;
+} */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--user-accent-strong) !important;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--user-accent-main) !important;
+}
+
+/* ===============================================================
+   6. Graph View
+   =============================================================== */
+.theme-dark .graph-view.color-fill,
+.theme-light .graph-view.color-fill { color: var(--user-text-muted); }
+.graph-view.color-circle { color: var(--user-accent-main); }
+.graph-view.color-line { color: var(--user-border-light); }
+.graph-view.color-text { color: var(--user-text-main); }
+
+/* ===============================================================
+   7. Callout 通用設定 (3D 實體感)
+   =============================================================== */
+.callout {
+	  word-break: break-word;     /* 讓長單字在邊界處斷行 */
+    overflow-wrap: anywhere;    /* 強制長網址或無空白字串在任何地方斷行 */
+    white-space: normal;        /* 確保文字正常換行 */
+    max-width: 100%;            /* 確保寬度不超過父容器 */
+    box-sizing: border-box;     /* 確保 Padding 不會導致寬度計算錯誤 */
+
+    overflow: visible !important;
+    margin: 0.6em 2px !important;
+    border: none !important; 
+    border-radius: 10px !important; 
+    
+    /* 光影堆疊：高光 + 內縮底影 + 貼地影 + 擴散影 */
+    box-shadow: 
+        var(--float-highlight),
+        var(--float-lowlight), 
+        var(--float-shadow-1), 
+        var(--float-shadow-2) !important;
+
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* 淺色模式：釉面感漸層 */
+.theme-light .callout {
+    background-image: linear-gradient(180deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%);
+    border: 1px solid rgba(255,255,255, 0.4) !important;
+}
+
+/* 深色模式：微弱光感 */
+.theme-dark .callout {
+    background-image: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(0,0,0,0.1) 100%);
+    border: 1px solid rgba(255,255,255, 0.05) !important;
+}
+
+.callout-title {
+    color: var(--user-callout-title);
+}
+
+.callout:hover {
+    transform: translateY(-1px);
+    box-shadow: 
+        var(--float-highlight),
+        var(--float-lowlight),
+        0 2px 4px rgba(0,0,0,0.1),
+        0 6px 12px -2px rgba(0,0,0,0.15) !important;
+}
+
+.callout-title { padding: 10px 14px 6px 14px; }
+.callout-content { padding: 0 14px 14px 14px; }
+
+/* ===============================================================
+   8. Callout Color Mappings
+   =============================================================== */
+
+/* --- 🔹 Cyan ---
+   Group: Abstract
+   Aliases: summary, tldr
+   Group: Tip
+   Aliases: hint, important
+*/
+.callout:is([data-callout="abstract"], [data-callout="summary"], [data-callout="tldr"], [data-callout="tip"], [data-callout="hint"], [data-callout="important"]) {
+    --callout-color: var(--user-accent-tip);
+    --callout-icon: "lucide-lightbulb"; /* 預設圖示，可被 Obsidian 內建覆蓋 */
+    background-color: color-mix(in srgb, var(--user-accent-tip) 25%, transparent) !important;
+}
+
+/* --- 🟡 Yellow ---
+  Group: Note, Info, Todo */
+.callout:is([data-callout="note"], [data-callout="info"], [data-callout="todo"]) {
+    --callout-color: var(--user-accent-info);
+    background-color: color-mix(in srgb, var(--user-accent-info) 25%, transparent) !important;
+}
+
+/* --- 🟢 Green ---
+  Group: Success, Aliases: check, done */
+.callout:is([data-callout="success"], [data-callout="check"], [data-callout="done"]) {
+    --callout-color: var(--user-accent-success);
+    background-color: color-mix(in srgb, var(--user-accent-success) 25%, transparent) !important;
+}
+
+/* --- 🟠 Orange ---
+  Group: Question (help, faq)
+  Group: Warning (caution, attention)
+*/
+.callout:is([data-callout="question"], [data-callout="help"], [data-callout="faq"], [data-callout="warning"], [data-callout="caution"], [data-callout="attention"]) {
+    --callout-color: var(--user-accent-warning);
+    background-color: color-mix(in srgb, var(--user-accent-warning) 25%, transparent) !important;
+}
+
+/* --- 🟣 Red ---
+  Group: Failure (fail, missing)
+  Group: Danger (error, bug)
+*/
+.callout:is([data-callout="failure"], [data-callout="fail"], [data-callout="missing"], [data-callout="danger"], [data-callout="error"], [data-callout="bug"]) {
+    --callout-color: var(--user-accent-error);
+    background-color: color-mix(in srgb, var(--user-accent-error) 25%, transparent) !important;
+}
+
+/* --- 🟤 Purple ---
+  Group: Quote
+  Aliases: cite
+*/
+.callout:is([data-callout="quote"], [data-callout="cite"]) {
+    --callout-color: var(--user-accent-background);
+    background-color: color-mix(in srgb, var(--user-accent-quote) 25%, transparent) !important;
+}
+
+.callout:is([data-callout="example"], [data-callout="e.g."]) {
+    --callout-color: var(--user-accent-example);
+    background-color: color-mix(in srgb, var(--user-accent-example) 25%, transparent) !important;
+}
+
+.callout[data-callout="quote"] .callout-content {
+    font-family: serif; /* 增加書卷氣 */
+}
+
+/* ===============================================================
+   9. Misc
+   =============================================================== */
+
+.workspace-tab-header.is-active { box-shadow: inset 0 2px 0 0 var(--user-accent-strong); }
+.cm-footref, .cm-formatting-link, .external-link-icon { color: var(--user-accent-strong) !important; }
+
+/* Horizontal Rule */
+.markdown-preview-view hr,
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--user-accent-strong);
+  opacity: 1;
+}
+
+/* Search Result Highlight, with dynamic highlighter plugin */
+.cm-s-obsidian span.cm-matched-string,
+.markdown-source-view.mod-cm6 .cm-s-obsidian span.cm-matched-string {
+  background-color: rgba(255, 215, 0, 0.4); /* Gold background */
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Avoid text color being overwritten by other styles */
+  border-radius: 3px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+/* ===================================================
+ Modify Obsidian Preview Window (Popover) Size
+ =================================================== */
+.popover.hover-popover {
+    /* -- Width Setting -- */
+    width: 600px;  /* Your desired width, usually around 400px */
+    /* max-width: 80vw; /* Prevents overflow on small screens */
+
+    /* -- Height Setting -- */
+    height: 500px; /* Fixed height */
+    /* max-height: 70vh; /* Maximum height limit */
+}
+
+/* Ensure embedded content adapts to the new height */
+.popover.hover-popover .markdown-embed {
+    height: 100% !important;
+    max-height: none !important;
+    width: 100% !important;
+    Max-width: none !important;
+}
+
+/* Adjust preview window image size limit, to avoid images being too large */
+.popover.hover-popover img {
+    max-width: 100%;
+}
+
+/* Adjust "source" property icon */
+.metadata-property[data-property-key="source"] .metadata-property-icon svg {
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='size-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25' /%3E%3C/svg%3E") no-repeat center;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='size-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25' /%3E%3C/svg%3E") no-repeat center;
+  color: var(--icon-color);
+  background-color: var(--icon-color);
+}
+
+
+/* ===================================================
+ Adjust Obsidian Canvas node selection style
+ =================================================== */
+.canvas-node.is-selected .canvas-node-container, .canvas-node.is-focused .canvas-node-container {
+  border-color: #FF69B4; /* var(--user-accent-strong); */
+}
+
+.canvas-selection.mod-group-selection {
+  border-width: 3px;
+  border-radius: 3px;
+  border-color: #FF69B4; /* var(--user-accent-strong); */
+  pointer-events: initial;
+}
+
+/* ===============================================================
+   Blockquote 3D style (same as Callout)
+   =============================================================== */
+/* --- 1. Reading View - Perfect 3D Box --- */
+.markdown-preview-view blockquote {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    white-space: normal;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0.6em 2px !important;
+    
+    /* 去除 Obsidian 預設的引用直線 */
+    border-left: none !important; 
+    
+    /* 統一 Padding (取 Callout 標題與內容的中間值) */
+    padding: 12px 16px !important;
+    
+    /* 核心：3D 實體感 (圓角 + 陰影) */
+    border-radius: 10px !important;
+    box-shadow: 
+        var(--float-highlight),
+        var(--float-lowlight), 
+        var(--float-shadow-1), 
+        var(--float-shadow-2) !important;
+        
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* --- 2. Light/Dark Mode --- */
+
+/* ☀️ Light Mode: Porcelain釉面感 */
+.theme-light .markdown-preview-view blockquote {
+    /* Background Gradient */
+    background-image: linear-gradient(180deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%);
+    background-color: var(--user-bg-blockquote); /* Ensure background color */
+    
+    /* 玻璃感邊框 */
+    border: 1px solid rgba(255,255,255, 0.4) !important;
+    
+    /* 文字顏色 */
+    color: var(--user-text-main);
+}
+
+/* 🌙 Dark Mode: Weak Light */
+.theme-dark .markdown-preview-view blockquote {
+    background-image: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(0,0,0,0.1) 100%);
+    background-color: var(--user-bg-blockquote);
+    border: 1px solid rgba(255,255,255, 0.05) !important;
+    color: var(--user-text-main);
+}
+
+/* --- 3. Hover Effect --- */
+.markdown-preview-view blockquote:hover {
+    transform: translateY(-1px);
+    box-shadow: 
+        var(--float-highlight),
+        var(--float-lowlight),
+        0 2px 4px rgba(0,0,0,0.1),
+        0 6px 12px -2px rgba(0,0,0,0.15) !important;
+}
+
+/* Note: Edit mode cannot be made into a 'single box', so we only sync 'background color' and 'text color',
+   and keep the left side line, making it look neat when editing, unlike broken blocks.
+*/
+.markdown-source-view.mod-cm6 .HyperMD-quote {
+    background-color: var(--user-bg-blockquote) !important;
+    color: var(--user-text-main);
+}
+
+/*
+ * 1. Inline Code in Edit mode (Live Preview)
+ * 2. Inline Code in Reading mode (using :not(pre) > code to exclude code block)
+ *
+ * [Note] Use !important to ensure it overrides the default theme styles
+ */
+body .cm-s-obsidian span.cm-inline-code,
+body .markdown-preview-view :not(pre) > code,
+code {
+    font-family: var(--font-monospace) !important; /* 使用 Obsidian 的等寬字體變數 */
+    background-color: var(--user-inline-code-bg);
+    color: var(--user-inline-code-text) !important;
+    font-size: 0.9em !important; /* 略微縮小字體 */
+    padding: 2px 5px !important; /* 上下 2px, 左右 5px */
+    border-radius: 5px !important; /* 圓角 */
+    text-shadow: none !important; /* 移除主題可能自帶的文字陰影 */
+    border: none !important; /* 確保無邊框 */
+    vertical-align: baseline !important; /* 對齊基準線 */
+    letter-spacing: 0.2px !important; /* 輕微字距 */
+    margin: 0 2px; /* 統一邊距 */
+}
+
+/*
+==================================================
+Note Embeds style
+==================================================
+*/
+
+/* Hide embed title */
+.markdown-embed-title {
+    display: none;
+}
+
+/* 根據 alt 屬性控制標題大小 */
+.internal-embed:is([alt~=h2]) .markdown-embed-title {
+  font-size: var(--h2-size);
+  font-weight: var(--h2-weight);
+  display: block; /* 覆蓋 display: none; */
+}
+
+.internal-embed:is([alt~=h1]) .markdown-embed-title {
+  font-size: var(--h1-size);
+  font-weight: var(--h1-weight);
+  display: block; /* 覆蓋 display: none; */
+}
+
+/* 設置嵌入連結圖示 (右上角) 的顏色 */
+.markdown-embed-link {
+    color: var(--text-faint-color);
+}
+
+/* 特殊嵌入樣式 (H5 標題卡片) */
+.markdown-embed:has(.el-h5:is(:only-of-type,:last-child)) {
+    background-color: var(--background-primary-alt);
+    border-radius: var(--radius-sm);
+    border: none;
+    padding: 8px;
+}
+.markdown-embed .el-h5:is(:only-of-type,:last-child) {
+    text-align: center;
+    & h5 {
+        color: var(--color-base-50);
+        font-size: 0.875em;
+        font-weight: var(--font-medium);
+    }
+}
+
+/* 檔案嵌入 (如 PDF, 圖片等) 的通用樣式 */
+.file-embed.mod-generic {
+    border-radius: var(--radius-sm);
+    font-weight: var(--font-medium);
+    --text-muted: var(--color-base-50);
+    --text-normal: var(--icon-color);
+}
+
+/* 檔案嵌入的標題微調 */
+.file-embed-title {
+    padding-top: 0.125rem;
+}
+
+/* 調整 inline embed 的 padding (使用高特異性覆蓋) */
+.markdown-source-view .inline-embed > .markdown-embed-content > .markdown-source-view,
+.markdown-preview-view .inline-embed > .markdown-embed-content > .markdown-preview-view {
+  padding: 0;
+}
+
+
+/* ===============================================================
+   字體設定 (Font Settings)
+   =============================================================== */
+:root {  
+  /* Option A (Default): Source Serif 4 -同源思源宋體，數字最整齊 */
+  --english-font: 'Source Serif 4';
+  
+  /* Option B: Lora - 帶有書法筆觸，優雅且適合螢幕 */
+  /* --english-font: '  Lora'; */
+  
+  /* Option C: PT Serif - 寬敞端正，學術感強，可讀性高 */
+  /* --english-font: 'PT Serif'; */
+
+  /* 字體優先順序：選定的英文 -> 思源宋體 (中) -> 預設襯線 */
+  /* 加上 Apple System Font 等是為了在尚未載入時有較好的系統預設 */
+  --user-font-text: var(--english-font), 'Noto Serif TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', serif !important;
+  
+  /* 排版參數：高行高與寬字距，營造書本閱讀感 */
+  --line-height-normal: 1.8 !important; 
+  --letter-spacing-norm: 0.05em !important;
+}
+
+/* 核心區域：針對「筆記內容」套用完整樣式 */
+/* 閱讀模式 (Reading View) */
+.markdown-preview-view {
+  font-family: var(--user-font-text) !important;
+  line-height: var(--line-height-normal) !important;
+  letter-spacing: var(--letter-spacing-norm) !important;
+}
+
+/* 編輯模式 (Source Mode / Live Preview) */
+.markdown-source-view .cm-scroller {
+  font-family: var(--user-font-text) !important;
+  line-height: var(--line-height-normal) !important;
+  letter-spacing: var(--letter-spacing-norm) !important;
+}
+
+/* 強制修正渲染後的段落與列表 */
+.markdown-rendered p,
+.markdown-rendered li,
+.markdown-rendered ul,
+.markdown-rendered ol {
+  font-family: var(--user-font-text) !important;
+  letter-spacing: var(--letter-spacing-norm) !important;
+  line-height: var(--line-height-normal) !important;
+}
+
+/* 全域區域：針對「App 介面」套用安全樣式 */
+body, .app-container {
+  font-family: var(--user-font-text) !important;
+}
+
+/* 標題與強調樣式 */
+h1, h2, h3, h4, h5, h6, strong, b {
+  font-family: var(--user-font-text) !important;
+  font-weight: 700 !important;
+}
+
+/* 修正 Metadata (Properties) 區域字體 */
+/* 針對整個 Metadata 容器、標籤(Key) 與 內容(Value) */
+.metadata-properties-title,
+.metadata-property-key,
+.metadata-property-value,
+.text-button-label {
+  font-family: var(--user-font-text) !important;
+  letter-spacing: var(--letter-spacing-norm) !important;
+}
+
+/* 修改 Graph View (關聯圖) 的字體 */
+.graph-view.view-master {
+    font-family: var(--user-font-text) !important;
+}
+
+/* 如果你也想改「局部關聯圖 (Local Graph)」的字體，請加上這段 */
+.workspace-leaf-content[data-type="localgraph"] .graph-view.view-master {
+    font-family: var(--user-font-text) !important;
+}
+
+/* 預設狀態：限制在視窗寬度內，強迫縮小以適應版面 */
+.mermaid svg {
+    max-width: 100%;
+    height: auto;
+    transition: all 0.3s ease; /* 加入 0.3秒 的平滑動畫效果 */
+    cursor: zoom-in; /* 滑鼠游標變成放大鏡 */
+}
+
+/* 互動狀態：當滑鼠「懸停」在圖表上時 */
+.mermaid:hover svg {
+    max-width: none !important; /* 解除寬度限制，恢復原始大小 */
+    min-width: 100%; /* 確保至少填滿畫面 */
+    /* 如果您希望它放大得更誇張，可以加這行：
+       transform: scale(1.2); 
+       transform-origin: top left; 
+    */
+}
+
+/* 讓容器在變寬時可以左右捲動，而不是撐破版面 */
+.mermaid:hover {
+    overflow-x: auto;
+}
+
+
+/* ===============================================================
+   幻燈片設定 (Obsidian core plugin: slides)
+   =============================================================== */
+
+/* 1. 全域變數設定 (控制中心) */
+.reveal {
+    /* === 🎛️ MASTER SWITCH === */
+    /* Change this ONE value to scale the entire presentation */
+    /* Recommended: 20px to 40px depending on screen size */
+    --slide-base-size: 20px; 
+
+    /* === 📐 RATIOS (Multipliers) === */
+    /* These define how much bigger headers are compared to normal text */
+    --h1-ratio: 1.9;  /* H1 is 2.5x bigger than base */
+    --h2-ratio: 1.7;
+    --h3-ratio: 1.5;
+    --h4-ratio: 1.3;
+    --h5-ratio: 1.2;
+    --h6-ratio: 1.1;
+    --code-ratio: 0.85; /* Code is usually slightly smaller */
+
+    /* === ⚙️ CALCULATIONS (Do not touch these usually) === */
+    --p-size: var(--slide-base-size);
+    
+    --user-h1-size: calc(var(--slide-base-size) * var(--h1-ratio));
+    --user-h2-size: calc(var(--slide-base-size) * var(--h2-ratio));
+    --user-h3-size: calc(var(--slide-base-size) * var(--h3-ratio));
+    --user-h4-size: calc(var(--slide-base-size) * var(--h4-ratio));
+    --user-h5-size: calc(var(--slide-base-size) * var(--h5-ratio));
+    --user-h6-size: calc(var(--slide-base-size) * var(--h6-ratio));
+    
+    --user-code-size: calc(var(--slide-base-size) * var(--code-ratio));
+}
+
+/* 2. 版面配置與滾動條 (強制內容可滾動) */
+.reveal .slides > section,
+.reveal .slides > section > section,
+.reveal .slides section {
+    overflow-y: auto !important;  /* 內容過長時顯示滾動條 */
+    height: 100% !important;      /*以此確保滾動條正常運作 */
+    display: block !important;
+    text-align: left !important;  /* 強制靠左對齊 */
+}
+
+/* ==排版與字體大小== */
+
+/* 3. 對齊重置 (強制靠左) */
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6, 
+.reveal p, .reveal ul, .reveal ol {
+    text-align: left !important;
+    margin-left: 0 !important;
+}
+
+/* 4. 標題樣式 (H1-H6) */
+.reveal h1 {
+    font-size: var(--user-h1-size) !important;
+    text-transform: none !important;
+    color: var(--h1-gradient);
+}
+
+.reveal h2 {
+    font-size: var(--user-h2-size) !important;
+    text-transform: none !important;
+    color: var(--h2-gradient);
+}
+
+.reveal h3 {
+    font-size: var(--user-h3-size) !important;
+    text-transform: none !important;
+    color: var(--h3-gradient);
+}
+
+.reveal h4, .reveal h5, .reveal h6 {
+    font-size: var(--user-h4-size) !important;
+    text-transform: none !important;
+    color: var(--user-text-muted);
+}
+
+/* 5. 內文與列表 (p, li 統一大小) */
+.reveal p, 
+.reveal li,
+.reveal ol {
+    font-size: var(--slide-base-size) !important; /* 參照上方的變數設定 */
+    line-height: 1.5 !important;
+}
+
+/* Adjust text size inside code blocks */
+.reveal pre {
+    font-size: var(--user-code-size);  /* Increase/Decrease this value */
+    font-family: 'Fira Code', 'Consolas', monospace; /* Optional: Change font */
+}
+
+
+/* 7. 表格樣式 */
+.reveal table {
+    font-size: var(--slide-base-size) !important; /* 跟隨內文大小 */
+    line-height: 1.2 !important;
+    display: block !important;
+    overflow: auto !important;
+    max-height: 90vh !important;
+    width: 100% !important;
+}
+
+.reveal table th {
+    position: sticky; /* 固定表頭 */
+    top: 0;
+    background-color: var(--background-primary);
+    z-index: 1;
+}
+
+/* 1. Reset the Callout Container */
+.reveal .callout {
+    /* Force the callout to use your base size variable */
+    font-size: var(--slide-base-size) !important; 
+    
+    /* Optional: Fix spacing around the box */
+    margin: 1em 0;
+    line-height: 1.4;
+    border-radius: 8px; /* Softer corners */
+}
+
+/* 2. Fix the Huge Title */
+.reveal .callout-title {
+    /* Set title size to be just slightly larger than base text */
+    font-size: 1.1rem !important; 
+    color: var(--user-text-muted);
+    
+    /* Ensure padding looks normal */
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center; /* Vertically align icon and text */
+}
+
+/* 3. Fix the Icon Size */
+.reveal .callout-icon {
+    /* Prevent icon from being massive */
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 0.5rem;
+    display: flex; /* Fix alignment issues */
+}
+
+.reveal .callout-icon svg {
+    /* Ensure SVG fits the container */
+    width: 100%;
+    height: 100%;
+}
