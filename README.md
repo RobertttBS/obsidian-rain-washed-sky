@@ -7,6 +7,8 @@
 
 **Rain Washed Sky** is an Obsidian theme inspired by the timeless aesthetics of Chinese porcelain. It balances the delicate, jade-like texture of **Ru Kiln (Ru ware)** with the deep, vivid contrast of **Blue and White porcelain**.
 
+**Language Support:** English (latin-ext), Traditional Chinese, and Simplified Chinese
+
 ---
 
 ## ✍️ Formatting Features
