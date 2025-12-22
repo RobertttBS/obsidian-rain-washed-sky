@@ -34,11 +34,11 @@ Optimized for the core **Slides** plugin:
 
 - **3D Callouts:** Blockquotes and Callouts have a "floating" porcelain texture with rounded corners and soft shadows.
 - **Mermaid Diagrams:** Constrained to page width by default; **hover** over a diagram to zoom in and scroll.
-- **Typography:** Uses **Source Serif 4** and **Noto Serif TC** with increased line height (1.8) for a book-like experience.
+- **Typography:** Uses **Noto Serif TC** and **Noto Serif SC** with increased line height (1.8) for a book-like experience.
 
 ---
 
 ## 🏗️ Installation
 
 1.  Open Obsidian **Settings** > **Appearance** > **Themes**.
-2.  Click **Manage**, search for **"Rain Washed Sky"**, and install.
+2.  Click **Manage**, search for **"Rain-Washed Sky"**, and install.
