@@ -566,6 +566,11 @@ hr {
 /* ===================================================
  Modify Obsidian Preview Window (Popover) Size
  =================================================== */
+/* Change the backgound color of popover */
+ .popover {
+  --background-primary: var(--background-secondary);
+}
+
 .popover.hover-popover {
   /* -- Width Setting -- */
   width: 600px;  /* Your desired width, usually around 400px */
