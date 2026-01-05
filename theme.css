@@ -484,7 +484,7 @@ body.theme-dark ::-webkit-scrollbar-track {
    Group: Tip
    Aliases: hint, important
 */
-.callout:is([data-callout="abstract"], [data-callout="summary"], [data-callout="tldr"], [data-callout="tip"], [data-callout="hint"], [data-callout="important"]) {
+.callout:is([data-callout="abstract"], [data-callout="summary"], [data-callout="tldr"], [data-callout="tip"], [data-callout="hint"]) {
   --callout-color: var(--user-accent-tip);
   --callout-icon: "lucide-lightbulb"; /* 預設圖示，可被 Obsidian 內建覆蓋 */
   background-color: color-mix(in srgb, var(--user-accent-tip) 25%, transparent);
@@ -492,14 +492,14 @@ body.theme-dark ::-webkit-scrollbar-track {
 
 /* --- 🟡 Yellow ---
   Group: Note, Info, Todo */
-.callout:is([data-callout="note"], [data-callout="info"], [data-callout="todo"]) {
+.callout:is([data-callout="note"]) {
   --callout-color: var(--user-accent-info);
   background-color: color-mix(in srgb, var(--user-accent-info) 25%, transparent);
 }
 
 /* --- 🟢 Green ---
   Group: Success, Aliases: check, done */
-.callout:is([data-callout="success"], [data-callout="check"], [data-callout="done"]) {
+.callout:is([data-callout="success"], [data-callout="check"], [data-callout="done"], [data-callout="todo"], [data-callout="important"]) {
   --callout-color: var(--user-accent-success);
   background-color: color-mix(in srgb, var(--user-accent-success) 25%, transparent);
 }
@@ -526,12 +526,12 @@ body.theme-dark ::-webkit-scrollbar-track {
   Group: Quote
   Aliases: cite
 */
-.callout:is([data-callout="quote"], [data-callout="cite"]) {
+.callout:is([data-callout="quote"], [data-callout="info"], [data-callout="cite"]) {
   --callout-color: var(--user-accent-background);
   background-color: color-mix(in srgb, var(--user-accent-quote) 25%, transparent);
 }
 
-.callout:is([data-callout="example"], [data-callout="e.g."]) {
+.callout:is([data-callout="example"], [data-callout="eg"], [data-callout="e.g."]) {
   --callout-color: var(--user-accent-example);
   background-color: color-mix(in srgb, var(--user-accent-example) 25%, transparent);
 }
@@ -834,7 +834,6 @@ h1, h2, h3, h4, h5, h6, strong, b {
   letter-spacing: var(--letter-spacing-norm);
 }
 
-/* fix the text overflow in metadata value */
 .metadata-property-value .external-link .multi-select-pill-content,
 .metadata-property-value .internal-link .multi-select-pill-content {
   padding-bottom: 2px;
@@ -848,7 +847,12 @@ h1, h2, h3, h4, h5, h6, strong, b {
 .setting-item-control select,
 .dropdown,
 .dropdown option,
-.nav-file-title-content, .nav-folder-title-content,
+.nav-file-title-content,
+.nav-folder-title-content,
+.is-mobile .suggestion-item,
+.suggestion-item,
+.suggestion-item.mod-complex .suggestion-title,
+.suggestion-item.mod-complex,
 .setting-item-name {
   padding-bottom: 3px;
   margin-bottom: -3px;
