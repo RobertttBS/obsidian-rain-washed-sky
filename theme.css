@@ -1211,3 +1211,18 @@ Workspace Decoration
 .popover.hover-editor.is-pinned.is-pinned.is-active .popover-titlebar {
   background-color: var(--user-text-faint);
 }
+
+/* ======================
+   Omniseaerch Styling
+   ====================== */
+/* .search-result:not(.better-search-views-tree-item-children .search-result), */
+.tree-item.search-result > .search-result-file-matches:has(.better-search-views-tree),
+.omnisearch-result {
+  border-radius: 10px;
+  box-shadow: 
+      var(--float-highlight),
+      var(--float-lowlight), 
+      var(--float-shadow-1), 
+      var(--float-shadow-2);
+  margin-bottom: 0.5rem;
+}
