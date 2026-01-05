@@ -1155,6 +1155,8 @@ Workspace Decoration
 /* Adjust tab header */
 .mod-root .workspace-tab-header.is-active,
 .workspace .mod-root .workspace-tab-header {
+  margin-left: 4px;
+  margin-right: 4px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
@@ -1162,6 +1164,10 @@ Workspace Decoration
   box-shadow: 
     var(--float-highlight),
     var(--float-lowlight);
+}
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
+  margin-left: 0px;
+  margin-right: 0px;
 }
 .workspace-split.mod-root .workspace-tab-header.is-active::before,
 .workspace-split.mod-root .workspace-tab-header.is-active::after {
