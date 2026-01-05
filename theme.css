@@ -1154,9 +1154,6 @@ Workspace Decoration
 /* Adjust tab header */
 .mod-root .workspace-tab-header.is-active,
 .workspace .mod-root .workspace-tab-header {
-  margin-left: 4px;
-  margin-right: 4px;
-  
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
