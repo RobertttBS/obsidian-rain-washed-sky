@@ -38,7 +38,7 @@
   --user-bg-pink-soft:    #DEEBEB;
   --user-bg-pink-deep:    #D1E3E3;
   --user-bg-blockquote:   #e0f0f0;
-  --user-active-line:     #dde7e7;
+  --user-active-line:     #ddeaea;
   --user-canvas-bg:       #f6f8f8;
   --user-canvas-node:     #f0f5f5;
 
@@ -1030,9 +1030,9 @@ h1, h2, h3, h4, h5, h6, strong, b {
    =============================================================== */
 .theme-light {
   --canvas-red: 255, 100, 100;
-  --canvas-orange: 255, 144, 21;
+  --canvas-orange: 255, 175, 70;
   --canvas-yellow: 255, 230, 100;
-  --canvas-green: 100, 200, 150;
+  --canvas-green: 198, 235, 217;
   --canvas-blue: 100, 200, 255;
   --canvas-purple: 180, 150, 255;
 }
@@ -1169,12 +1169,19 @@ Workspace Decoration
   margin-left: 0px;
   margin-right: 0px;
 }
-.workspace-split.mod-root .workspace-tab-header.is-active::before,
+
+.workspace-split.mod-root .workspace-tab-header.is-active::before {
+  --tab-curve: 12px;
+  box-shadow: 
+    0 0 0 calc(var(--tab-curve) * 4) var(--user-bg-white);
+}
+
 .workspace-split.mod-root .workspace-tab-header.is-active::after {
   --tab-curve: 12px;
   box-shadow: 
     0 0 0 calc(var(--tab-curve) * 4) var(--user-bg-white);
 }
+
 /* Fix for cut-off descenders (y, g, j) in active tab headers */
 .workspace .mod-root .workspace-tab-header-inner-icon,
 .workspace .mod-root .workspace-tab-header-inner-title {
