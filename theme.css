@@ -1233,3 +1233,8 @@ Workspace Decoration
       var(--float-shadow-2);
   margin-bottom: 0.5rem;
 }
+
+.tree-item-inner {
+  padding-bottom: 3px;
+  margin-bottom: -3px;
+}
