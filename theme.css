@@ -61,6 +61,7 @@
 
   --user-link-internal:   #4c9677;
   --user-link-external:   #4A90E2;
+  --link-unresolved-color: #4c9677;
 
   /* === 介面 === */
   --user-border-light:    #B0C4C4;
@@ -146,6 +147,7 @@
 
   --user-link-internal:   #A2D99E;
   --user-link-external:   #6495ED;
+  --link-unresolved-color: #A2D99E;
 
   /* === 介面 === */
   --user-border-light:    #3A5F5F;
