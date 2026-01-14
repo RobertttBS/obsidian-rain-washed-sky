@@ -543,7 +543,7 @@ body.theme-dark ::-webkit-scrollbar-track {
 
 /* --- 🟢 Green ---
   Group: Success, Aliases: check, done */
-.callout:is([data-callout="success"], [data-callout="check"], [data-callout="done"], [data-callout="todo"], [data-callout="important"]) {
+.callout:is([data-callout="success"], [data-callout="check"], [data-callout="done"], [data-callout="todo"], [data-callout="important"], [data-callout="fleetings"]) {
   --callout-color: var(--user-accent-success);
   background-color: color-mix(in srgb, var(--user-accent-success) 25%, transparent);
 }
@@ -1315,13 +1315,8 @@ Workspace Decoration
   margin-right: 0px;
 }
 
-.workspace-split.mod-root .workspace-tab-header.is-active::before {
-  --tab-curve: 12px;
-  box-shadow:
-    0 0 0 calc(var(--tab-curve) * 4) var(--user-bg-white);
-}
-
-.workspace-split.mod-root .workspace-tab-header.is-active::after {
+.workspace-split.mod-root .workspace-tab-header-container .workspace-tab-header.is-active::before,
+.workspace-split.mod-root .workspace-tab-header-container .workspace-tab-header.is-active::after {
   --tab-curve: 12px;
   box-shadow:
     0 0 0 calc(var(--tab-curve) * 4) var(--user-bg-white);
