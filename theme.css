@@ -1374,6 +1374,7 @@ Workspace Decoration
   margin-bottom: 0.5rem;
 }
 
+.multi-select-pill-content,
 .vertical-tab-nav-item-title,
 .setting-item-description,
 .tree-item-inner {
