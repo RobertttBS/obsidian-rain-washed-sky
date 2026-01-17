@@ -33,73 +33,69 @@
 /* --- ☀️ 淺色模式：汝窯為體，青花為用 --- */
 .theme-light {
   /* === 基底 === */
-  --user-bg-white: #F2F7F7;
-  --user-bg-pink-pale: #E6F0F0;
-  --user-bg-pink-soft: #DEEBEB;
-  --user-bg-pink-deep: #D1E3E3;
-  --user-bg-blockquote: #e0f0f0;
-  --user-active-line: #ddeaea;
-  --user-canvas-bg: #f6f8f8;
-  --user-canvas-node: #f0f5f5;
+  --user-bg-white:        #F2F7F7;
+  --user-bg-pink-pale:    #E6F0F0;
+  --user-bg-pink-soft:    #DEEBEB;
+  --user-bg-pink-deep:    #D1E3E3;
+  --user-bg-blockquote:   #e0f0f0;
+  --user-active-line:     #ddeaea;
+  --user-canvas-bg:       #f6f8f8;
+  --user-canvas-node:     #f0f5f5;
 
   /* === 文字與粗體 === */
-  --user-text-main: #2c3e50;
-  --user-text-muted: #5D7290;
-  --user-text-faint: #8FA4C4;
+  --user-text-main:       #2c3e50;
+  --user-text-muted:      #5D7290;
+  --user-text-faint:      #8FA4C4;
   /* 粗體：使用深邃的普魯士藍 */
-  --user-text-bold: #1A2F45;
+  --user-text-bold:       #1A2F45; 
 
   /* === 標題漸層 (青花濃淡) === */
-  --h1-gradient: #1C4E80;
-  /* 濃豔蘇麻離青 */
-  --h2-gradient: #346c9c;
-  /* 中調青花 */
-  --h3-gradient: #5D8AA8;
-  /* 淺調藍灰 */
+  --h1-gradient:          #1C4E80; /* 濃豔蘇麻離青 */
+  --h2-gradient:          #346c9c; /* 中調青花 */
+  --h3-gradient:          #5D8AA8; /* 淺調藍灰 */
 
   /* === 強調與連結 === */
-  --user-accent-main: #346c9c;
-  --user-accent-strong: #B22222;
-  /* 釉裡紅 (僅用於強調/警示) */
-  --user-accent-highlight: #FAEBD7;
+  --user-accent-main:     #346c9c;
+  --user-accent-strong:   #B22222; /* 釉裡紅 (僅用於強調/警示) */
+  --user-accent-highlight:#FAEBD7;
 
-  --user-link-internal: #4c9677;
-  --user-link-external: #4A90E2;
+  --user-link-internal:   #4c9677;
+  --user-link-external:   #4A90E2;
   --link-unresolved-color: #4c9677;
 
   /* === 介面 === */
-  --user-border-light: #B0C4C4;
-  --user-selection: rgba(255, 213, 0, 0.4);
+  --user-border-light:    #B0C4C4;
+  --user-selection:       rgba(255, 213, 0, 0.4);
 
   /* === Callout === */
-  --user-accent-tip: #74bfbb;
-  --user-accent-success: #6B8E23;
-  --user-accent-warning: #D4AF37;
-  --user-accent-info: #53789E;
-  --user-accent-error: #B22222;
-  --user-accent-quote: #929292;
-  --user-accent-example: #6A5ACD;
+  --user-accent-tip:      #74bfbb;
+  --user-accent-success:  #6B8E23;
+  --user-accent-warning:  #D4AF37;
+  --user-accent-info:     #53789E;
+  --user-accent-error:    #B22222;
+  --user-accent-quote:    #929292;
+  --user-accent-example:  #6A5ACD;
   --user-accent-background: #9B59B6;
-  --user-callout-title: #000000;
+  --user-callout-title:   #000000;
 
-  --user-theme-pop: #E0806C;
+  --user-theme-pop:       #E0806C;
 
   /* --- 3D 浮動陰影 (汝窯溫潤感) --- */
   --float-highlight: inset 0 1.5px 0 0 rgba(255, 255, 255, 0.7);
   --float-lowlight: inset 0 -1px 0 0 rgba(0, 0, 0, 0.05);
-  --float-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --float-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.06); 
   --float-shadow-2: 0 3px 6px -2px rgba(28, 78, 128, 0.15);
-
+  
   --canvas-float-highlight: inset 0.6px 1px 0 0 rgba(255, 255, 255, 0.9);
   --canvas-float-lowlight: inset -0.6px -1px 0 0 rgba(0, 0, 0, 0.06);
-  --canvas-float-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --canvas-float-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.1); 
   --canvas-float-shadow-2: 0 3px 6px -2px rgba(28, 78, 128, 0.35);
 
   /* HSL 轉換結果：色相 0 (紅), 飽和度 68%, 亮度 42% */
   --accent-h: 0;
   --accent-s: 68%;
   --accent-l: 42%;
-
+  
   /* 重新宣告以確保生效 */
   --interactive-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
   --interactive-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 5%));
@@ -110,13 +106,13 @@
 
   /* --color-accent-1: #4C97DB; /* 會直接蓋到某些樣式的顏色 */
 
-  /* 文字：使用飽和的赤紅/鐵鏽紅，對比背景的青藍色 */
-  --user-tag-color: #C0392B;
+/* 文字：使用飽和的赤紅/鐵鏽紅，對比背景的青藍色 */
+  --user-tag-color:            #C0392B; 
   /* Hover 文字：轉為更鮮豔的胭脂紅 */
-  --user-tag-color-hover: #E74C3C;
-
+  --user-tag-color-hover:      #E74C3C;
+  
   /* 背景：帶有粉橘調的淺紅，像宣紙上的硃砂暈染 */
-  --user-tag-background: #FADBD8;
+  --user-tag-background:       #FADBD8; 
   /* Hover 背景：加強飽和度，變成溫暖的杏桃色 */
   --user-tag-background-hover: #F5CBA7;
 }
@@ -124,52 +120,51 @@
 /* --- 🌙 深色模式：青花為海，汝瓷為星 --- */
 .theme-dark {
   /* === 基底 === */
-  --user-bg-white: #0F1626;
-  --user-bg-pink-pale: #162138;
-  --user-bg-pink-soft: #1C2945;
-  --user-bg-pink-deep: #253555;
-  --user-bg-blockquote: #2b3952;
-  --user-active-line: #1b2843;
-  --user-canvas-bg: #0f1626;
-  --user-canvas-node: #191f2d;
+  --user-bg-white:        #0F1626;
+  --user-bg-pink-pale:    #162138;
+  --user-bg-pink-soft:    #1C2945;
+  --user-bg-pink-deep:    #253555;
+  --user-bg-blockquote:   #2b3952;
+  --user-active-line:     #1b2843;
+  --user-canvas-bg:       #0f1626;
+  --user-canvas-node:     #191f2d;
 
   /* === 文字 === */
-  --user-text-main: #F0F8FF;
-  --user-text-muted: #C0D4D4;
-  --user-text-faint: #5F7A7A;
-  --user-text-bold: #DCD0B3;
-  /* 流沙金 */
+  --user-text-main:       #F0F8FF;
+  --user-text-muted:      #C0D4D4;
+  --user-text-faint:      #5F7A7A;
+  --user-text-bold:       #DCD0B3; /* 流沙金 */
 
   /* === 標題漸層 === */
-  --h1-gradient: #8CD1D1;
-  --h2-gradient: #7CC4C4;
-  --h3-gradient: #6DB7B7;
+  --h1-gradient:          #8CD1D1;
+  --h2-gradient:          #7CC4C4;
+  --h3-gradient:          #6DB7B7;
 
   /* === 強調與連結 === */
-  --user-accent-main: #7CC5C5;
-  --user-accent-strong: #8A0908;
-  --user-accent-highlight: #2F4F4F;
+  --user-accent-main:     #7CC5C5;
+  --user-accent-strong:   #8A0908;
+  --user-accent-highlight:#2F4F4F;
 
-  --user-link-internal: #A2D99E;
-  --user-link-external: #6495ED;
+  --user-link-internal:   #A2D99E;
+  --user-link-external:   #6495ED;
   --link-unresolved-color: #A2D99E;
 
   /* === 介面 === */
-  --user-border-light: #3A5F5F;
-  --user-selection: rgba(255, 213, 0, 0.4);
+  --user-border-light:    #3A5F5F;
+  --user-selection:       rgba(255, 213, 0, 0.4);
 
   /* === Callout 專用色系 (新增/深色適配) === */
-  --user-accent-tip: #55e9cc;
-  --user-accent-success: #538731;
-  --user-accent-warning: rgb(255, 149, 20);
-  --user-accent-info: #1A6598;
-  --user-accent-error: #f32f2f;
-  --user-accent-quote: #d2d0d0;
-  --user-accent-example: #9370DB;
+  --user-accent-tip:      #55e9cc;
+  --user-accent-success:  #538731;
+  --user-accent-warning:  rgb(255, 149, 20);
+  --user-accent-info:     #1A6598;
+  --user-accent-error:    #f32f2f;
+  --user-accent-quote:    #d2d0d0;
+  --user-accent-example:  #9370DB;
   --user-accent-background: #AF7AC5;
-  --user-callout-title: #FFFFFF;
+  --user-callout-title:   #FFFFFF;
 
-  --user-theme-pop: #FF9E8B;
+  --user-theme-pop:       #FF9E8B;
 
   --float-highlight: inset 0.6px 1px 0 0 rgba(255, 255, 255, 0.2);
   --float-lowlight: inset -0.6px -1px 0 0 rgba(255, 255, 255, 0.12);
@@ -178,13 +173,13 @@
 
   --canvas-float-highlight: inset 1px 2px 0 0 rgba(255, 255, 255, 0.18);
   --canvas-float-lowlight: inset -1px -2px 0 0 rgba(255, 255, 255, 0.12);
-  --canvas-float-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --canvas-float-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.2); 
   --canvas-float-shadow-2: 0 4px 8px -2px rgba(0, 0, 0, 0.2);
 
   /* HSL 轉換結果：色相 359 (紅), 飽和度 89%, 亮度 29% */
   --accent-h: 359;
   --accent-s: 89%;
-  --accent-l: 29%;
+  --accent-l: 29%; 
 
   /* ⚠️ 注意：亮度 29% 在深色背景下可能略顯黯淡
      如果不夠明顯，可以試著把上面的 --accent-l 改成 40% 或 50% */
@@ -198,13 +193,13 @@
 
   /* --color-accent-1: #4C97DB; /* 會直接蓋到某些樣式的顏色 */
 
-  /* 文字：明亮的琥珀金，在深色背景極為突出 */
-  --user-tag-color: #FFD700;
+/* 文字：明亮的琥珀金，在深色背景極為突出 */
+  --user-tag-color:            #FFD700;
   /* Hover 文字：轉為更暖的橙金色，增加熱度感 */
-  --user-tag-color-hover: #FFC300;
+  --user-tag-color-hover:      #FFC300;
 
   /* 背景：使用半透明的深棕金色，模擬金漆底色 */
-  --user-tag-background: rgba(255, 215, 0, 0.15);
+  --user-tag-background:       rgba(255, 215, 0, 0.15);
   /* Hover 背景：提高亮度和不透明度，產生光暈感 */
   --user-tag-background-hover: rgba(255, 215, 0, 0.25);
 }
@@ -222,30 +217,30 @@ body {
   --h6-color: var(--user-text-faint);
 
   /* --- 連結與背景 --- */
-  --link-color: var(--user-link-internal);
-  --link-external-color: var(--user-link-external);
-  --background-primary: var(--user-bg-white);
-  --background-primary-alt: var(--user-bg-pink-pale);
-  --background-secondary: var(--user-bg-pink-soft);
+  --link-color:           var(--user-link-internal);
+  --link-external-color:  var(--user-link-external);
+  --background-primary:       var(--user-bg-white);
+  --background-primary-alt:   var(--user-bg-pink-pale); 
+  --background-secondary:     var(--user-bg-pink-soft);
   --background-secondary-alt: var(--user-bg-pink-deep);
 
   /* --- 介面 --- */
-  --titlebar-background: var(--user-bg-pink-soft);
-  --titlebar-background-focused: var(--user-bg-pink-soft);
-  --ribbon-background: var(--user-bg-pink-soft);
-  --ribbon-background-collapsed: var(--user-bg-pink-soft);
-  --tab-container-background: var(--user-bg-pink-soft);
+  --titlebar-background:          var(--user-bg-pink-soft);
+  --titlebar-background-focused:  var(--user-bg-pink-soft);
+  --ribbon-background:            var(--user-bg-pink-soft);
+  --ribbon-background-collapsed:  var(--user-bg-pink-soft);
+  --tab-container-background:     var(--user-bg-pink-soft);
 
   --scrollbar-bg: transparent;
   --scrollbar-thumb-bg: var(--user-accent-main);
 
   /* --- 文字 --- */
   --text-normal: var(--user-text-main);
-  --text-muted: var(--user-text-muted);
-  --text-faint: var(--user-text-faint);
+  --text-muted:  var(--user-text-muted);
+  --text-faint:  var(--user-text-faint);
 
   /* --- 邊框 --- */
-  --background-modifier-border: var(--user-border-light);
+  --background-modifier-border:       var(--user-border-light);
   --background-modifier-border-hover: var(--user-accent-main);
 
   /* --- 當前編輯行 --- */
@@ -259,14 +254,11 @@ body {
   --link-decoration: none;
 
   /* checklist */
-  --checklist-done-decoration: none;
-  /* 去除勾選後的 line-through */
-  --checklist-done-color: var(--text-normal);
-  /* 勾選後維持原樣 */
-
+  --checklist-done-decoration: none; /* 去除勾選後的 line-through */
+  --checklist-done-color: var(--text-normal); /* 勾選後維持原樣 */
+    
   /* --- Blockquotes 變數 (用於浮動卡片效果) --- */
-  --blockquote-border-thickness: 0;
-  /* 移除左側邊框 */
+  --blockquote-border-thickness: 0; /* 移除左側邊框 */
 
   --embed-border-start: none;
   --embed-padding: 0 1.25em 0 0;
@@ -279,11 +271,9 @@ body {
 }
 
 /* --- 互動 --- */
-.theme-light,
-.theme-dark,
-.markdown-source-view.mod-cm6 {
+.theme-light, .theme-dark, .markdown-source-view.mod-cm6 {
   --text-selection: var(--user-selection);
-  --text-highlight-bg: var(--user-accent-highlight);
+  --text-highlight-bg:        var(--user-accent-highlight);
 }
 
 /* =================================================================
@@ -291,9 +281,7 @@ body {
    ================================================================= */
 
 /* 粗體字 (Bold) */
-strong,
-b,
-.cm-strong {
+strong, b, .cm-strong {
   color: var(--user-text-bold);
   font-weight: 600;
 }
@@ -303,33 +291,25 @@ b,
 .cm-formatting-list-ul {
   color: var(--user-accent-main);
 }
-
 .cm-formatting-list-ol {
   color: var(--user-accent-main);
 }
-
-ol>li::marker {
+ol > li::marker {
   color: var(--user-accent-main);
   font-weight: bold;
 }
 
 /* 連結懸停 */
-a:hover,
-.internal-link:hover,
-.external-link:hover,
-.cm-link:hover,
-.cm-url:hover {
+a:hover, .internal-link:hover, .external-link:hover, .cm-link:hover, .cm-url:hover {
   background-color: var(--user-bg-pink-pale);
   text-decoration: none;
 }
 
 /* Tags & Marks */
-.tag,
-.cm-hashtag {
+.tag, .cm-hashtag {
   background-color: var(--user-tag-background);
   color: var(--user-tag-color);
 }
-
 mark {
   background-color: var(--user-tag-background);
   color: var(--user-tag-color);
@@ -338,13 +318,12 @@ mark {
 /* Checkbox */
 input[type="checkbox"] {
   border-color: var(--user-accent-main);
-  appearance: none;
+  appearance: none; 
   -webkit-appearance: none;
   border-width: 1px;
   border-style: solid;
   border-radius: 4px;
 }
-
 input[type="checkbox"]:checked {
   background-position: center;
   background-repeat: no-repeat;
@@ -359,8 +338,7 @@ input[type="checkbox"]:checked {
 
 /* ALL Headings in Editing View */
 .markdown-source-view.mod-cm6 .HyperMD-header {
-  padding-bottom: 20px;
-  /* Adjust "20px" to your preference */
+    padding-bottom: 1rem; /* Adjust "20px" to your preference */
 }
 
 /* ===============================================================
@@ -371,19 +349,18 @@ input[type="checkbox"]:checked {
 .markdown-rendered pre {
   background-color: var(--user-bg-pink-pale);
   color: var(--user-text-main);
-  border-radius: 10px;
+  border-radius: 10px; 
 }
 
 .markdown-preview-view table {
   border-color: var(--user-border-light);
 }
 
-.markdown-preview-view table thead tr>th {
+.markdown-preview-view table thead tr > th {
   background-color: var(--user-bg-pink-deep);
   color: var(--user-text-main);
   border-bottom-color: var(--user-accent-main);
 }
-
 .markdown-preview-view table tbody tr:nth-child(even) {
   background-color: var(--user-bg-pink-pale);
 }
@@ -436,21 +413,10 @@ body.theme-dark ::-webkit-scrollbar-track {
    6. Graph View
    =============================================================== */
 .theme-dark .graph-view.color-fill,
-.theme-light .graph-view.color-fill {
-  color: var(--user-text-muted);
-}
-
-.graph-view.color-circle {
-  color: var(--user-accent-main);
-}
-
-.graph-view.color-line {
-  color: var(--user-border-light);
-}
-
-.graph-view.color-text {
-  color: var(--user-text-main);
-}
+.theme-light .graph-view.color-fill { color: var(--user-text-muted); }
+.graph-view.color-circle { color: var(--user-accent-main); }
+.graph-view.color-line { color: var(--user-border-light); }
+.graph-view.color-text { color: var(--user-text-main); }
 
 /* ===============================================================
    7. Callout 通用設定 (3D 實體感)
@@ -458,36 +424,34 @@ body.theme-dark ::-webkit-scrollbar-track {
 .theme-light .callout,
 .theme-dark .callout,
 .markdown-source-view.mod-cm6 .callout {
-  max-width: 100%;
-  /* 確保寬度不超過父容器 */
-  box-sizing: border-box;
-  /* 確保 Padding 不會導致寬度計算錯誤 */
+  max-width: 100%;            /* 確保寬度不超過父容器 */
+  box-sizing: border-box;     /* 確保 Padding 不會導致寬度計算錯誤 */
 
   overflow: visible;
   margin: 0.6em 2px;
-  border: none;
-  border-radius: 10px;
-
+  border: none; 
+  border-radius: 10px; 
+  
   /* 光影堆疊：高光 + 內縮底影 + 貼地影 + 擴散影 */
-  box-shadow:
-    var(--float-highlight),
-    var(--float-lowlight),
-    var(--float-shadow-1),
-    var(--float-shadow-2);
+  box-shadow: 
+      var(--float-highlight),
+      var(--float-lowlight), 
+      var(--float-shadow-1), 
+      var(--float-shadow-2);
 
   transition: none;
 }
 
 /* 淺色模式：釉面感漸層 */
 .theme-light .callout {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%);
+  border: 1px solid rgba(255,255,255, 0.4);
 }
 
 /* 深色模式：微弱光感 */
 .theme-dark .callout {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(0, 0, 0, 0.1) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(0,0,0,0.1) 100%);
+  border: 1px solid rgba(255,255,255, 0.05);
 }
 
 .callout-title {
@@ -496,11 +460,11 @@ body.theme-dark ::-webkit-scrollbar-track {
 
 .callout:hover {
   transform: translateY(-2px);
-  box-shadow:
+  box-shadow: 
     var(--float-highlight),
     var(--float-lowlight),
-    0 2px 4px rgba(0, 0, 0, 0.1),
-    0 6px 12px -2px rgba(0, 0, 0, 0.15);
+    0 2px 4px rgba(0,0,0,0.1),
+    0 6px 12px -2px rgba(0,0,0,0.15);
 }
 
 /* Remove the hover border/shadow from callouts in Live Preview */
@@ -509,13 +473,8 @@ body.theme-dark ::-webkit-scrollbar-track {
   border: none;
 }
 
-.callout-title {
-  padding: 10px 14px 6px 14px;
-}
-
-.callout-content {
-  padding: 0 14px 14px 14px;
-}
+.callout-title { padding: 10px 14px 6px 14px; }
+.callout-content { padding: 0 14px 14px 14px; }
 
 /* ===============================================================
    8. Callout Color Mappings
@@ -529,8 +488,7 @@ body.theme-dark ::-webkit-scrollbar-track {
 */
 .callout:is([data-callout="abstract"], [data-callout="summary"], [data-callout="tldr"], [data-callout="tip"], [data-callout="hint"]) {
   --callout-color: var(--user-accent-tip);
-  --callout-icon: "lucide-lightbulb";
-  /* 預設圖示，可被 Obsidian 內建覆蓋 */
+  --callout-icon: "lucide-lightbulb"; /* 預設圖示，可被 Obsidian 內建覆蓋 */
   background-color: color-mix(in srgb, var(--user-accent-tip) 25%, transparent);
 }
 
@@ -584,15 +542,8 @@ body.theme-dark ::-webkit-scrollbar-track {
    9. Misc
    =============================================================== */
 
-.workspace-tab-header.is-active {
-  box-shadow: inset 0 2px 0 0 var(--user-accent-strong);
-}
-
-.cm-footref,
-.cm-formatting-link,
-.external-link-icon {
-  color: var(--user-accent-strong);
-}
+.workspace-tab-header.is-active { box-shadow: inset 0 2px 0 0 var(--user-accent-strong); }
+.cm-footref, .cm-formatting-link, .external-link-icon { color: var(--user-accent-strong); }
 
 /* Horizontal Rule */
 .markdown-preview-view hr,
@@ -606,12 +557,9 @@ hr {
 /* Search Result Highlight, with dynamic highlighter plugin */
 .cm-s-obsidian span.cm-matched-string,
 .markdown-source-view.mod-cm6 .cm-s-obsidian span.cm-matched-string {
-  background-color: rgba(255, 215, 0, 0.4);
-  /* Gold background */
-  text-decoration: none;
-  /* Remove underline */
-  color: inherit;
-  /* Avoid text color being overwritten by other styles */
+  background-color: rgba(255, 215, 0, 0.4); /* Gold background */
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Avoid text color being overwritten by other styles */
   border-radius: 3px;
   padding-top: 2px;
   padding-bottom: 2px;
@@ -621,19 +569,17 @@ hr {
  Modify Obsidian Preview Window (Popover) Size
  =================================================== */
 /* Change the backgound color of popover */
-.popover {
+ .popover {
   --background-primary: var(--background-secondary);
 }
 
 .popover.hover-popover {
   /* -- Width Setting -- */
-  width: 600px;
-  /* Your desired width, usually around 400px */
+  width: 600px;  /* Your desired width, usually around 400px */
   /* max-width: 80vw; /* Prevents overflow on small screens */
 
   /* -- Height Setting -- */
-  height: 500px;
-  /* Fixed height */
+  height: 500px; /* Fixed height */
   /* max-height: 70vh; /* Maximum height limit */
 }
 
@@ -662,17 +608,14 @@ hr {
 /* ===================================================
  Adjust Obsidian Canvas node selection style
  =================================================== */
-.canvas-node.is-selected .canvas-node-container,
-.canvas-node.is-focused .canvas-node-container {
-  border-color: #FF69B4;
-  /* var(--user-accent-strong); */
+.canvas-node.is-selected .canvas-node-container, .canvas-node.is-focused .canvas-node-container {
+  border-color: #FF69B4; /* var(--user-accent-strong); */
 }
 
 .canvas-selection.mod-group-selection {
   border-width: 3px;
   border-radius: 3px;
-  border-color: #FF69B4;
-  /* var(--user-accent-strong); */
+  border-color: #FF69B4; /* var(--user-accent-strong); */
   pointer-events: initial;
 }
 
@@ -687,21 +630,21 @@ hr {
   max-width: 100%;
   box-sizing: border-box;
   margin: 0.6em 2px;
-
+  
   /* 去除 Obsidian 預設的引用直線 */
-  border-left: none;
-
+  border-left: none; 
+  
   /* 統一 Padding (取 Callout 標題與內容的中間值) */
   padding: 12px 16px;
-
+  
   /* 核心：3D 實體感 (圓角 + 陰影) */
   border-radius: 10px;
-  box-shadow:
+  box-shadow: 
     var(--float-highlight),
-    var(--float-lowlight),
-    var(--float-shadow-1),
+    var(--float-lowlight), 
+    var(--float-shadow-1), 
     var(--float-shadow-2);
-
+      
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
@@ -710,33 +653,32 @@ hr {
 /* ☀️ Light Mode: Porcelain釉面感 */
 .theme-light .markdown-preview-view blockquote {
   /* Background Gradient */
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
-  background-color: var(--user-bg-blockquote);
-  /* Ensure background color */
-
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%);
+  background-color: var(--user-bg-blockquote); /* Ensure background color */
+  
   /* 玻璃感邊框 */
-  border: 1px solid rgba(255, 255, 255, 0.4);
-
+  border: 1px solid rgba(255,255,255, 0.4);
+  
   /* 文字顏色 */
   color: var(--user-text-main);
 }
 
 /* 🌙 Dark Mode: Weak Light */
 .theme-dark .markdown-preview-view blockquote {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(0, 0, 0, 0.1) 100%);
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(0,0,0,0.1) 100%);
   background-color: var(--user-bg-blockquote);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255,255,255, 0.05);
   color: var(--user-text-main);
 }
 
 /* --- 3. Hover Effect --- */
 .markdown-preview-view blockquote:hover {
   transform: translateY(-1px);
-  box-shadow:
+  box-shadow: 
     var(--float-highlight),
     var(--float-lowlight),
-    0 2px 4px rgba(0, 0, 0, 0.1),
-    0 6px 12px -2px rgba(0, 0, 0, 0.15);
+    0 2px 4px rgba(0,0,0,0.1),
+    0 6px 12px -2px rgba(0,0,0,0.15);
 }
 
 /* Note: Edit mode cannot be made into a 'single box', so we only sync 'background color' and 'text color',
@@ -754,29 +696,20 @@ hr {
  * [Note] Use to ensure it overrides the default theme styles
  */
 body .cm-s-obsidian span.cm-inline-code,
-body .markdown-preview-view :not(pre)>code,
+body .markdown-preview-view :not(pre) > code,
 .markdown-rendered code,
 code {
-  font-family: var(--font-monospace);
-  /* 使用 Obsidian 的等寬字體變數 */
+  font-family: var(--font-monospace); /* 使用 Obsidian 的等寬字體變數 */
   background-color: var(--user-inline-code-bg);
   color: var(--user-inline-code-text);
-  font-size: 0.9em;
-  /* 略微縮小字體 */
-  padding: 2px 5px;
-  /* 上下 2px, 左右 5px */
-  border-radius: 5px;
-  /* 圓角 */
-  text-shadow: none;
-  /* 移除主題可能自帶的文字陰影 */
-  border: none;
-  /* 確保無邊框 */
-  vertical-align: baseline;
-  /* 對齊基準線 */
-  letter-spacing: 0.2px;
-  /* 輕微字距 */
-  margin: 0 2px;
-  /* 統一邊距 */
+  font-size: 0.9em; /* 略微縮小字體 */
+  padding: 2px 5px; /* 上下 2px, 左右 5px */
+  border-radius: 5px; /* 圓角 */
+  text-shadow: none; /* 移除主題可能自帶的文字陰影 */
+  border: none; /* 確保無邊框 */
+  vertical-align: baseline; /* 對齊基準線 */
+  letter-spacing: 0.2px; /* 輕微字距 */
+  margin: 0 2px; /* 統一邊距 */
 }
 
 /*
@@ -829,8 +762,8 @@ Note Embeds style
 }
 
 /* 調整 inline embed 的 padding (使用高特異性覆蓋) */
-.markdown-source-view .inline-embed>.markdown-embed-content>.markdown-source-view,
-.markdown-preview-view .inline-embed>.markdown-embed-content>.markdown-preview-view {
+.markdown-source-view .inline-embed > .markdown-embed-content > .markdown-source-view,
+.markdown-preview-view .inline-embed > .markdown-embed-content > .markdown-preview-view {
   padding: 0;
 }
 
@@ -838,13 +771,13 @@ Note Embeds style
 /* ===============================================================
    字體設定 (Font Settings)
    =============================================================== */
-:root {
+:root {  
   /* 字體優先順序：選定的英文 -> 思源宋體 (中) -> 預設襯線 */
   /* 加上 Apple System Font 等是為了在尚未載入時有較好的系統預設 */
   --user-font-text: 'Noto Serif TC', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', serif;
   --font-text: var(--user-font-text);
   --font-interface: var(--user-font-text);
-
+ 
   /* 排版參數：高行高與寬字距，營造書本閱讀感 */
   --line-height-normal: 1.8;
   --letter-spacing-norm: 0.05em;
@@ -890,20 +823,12 @@ body {
 }
 
 /* 全域區域：針對「App 介面」套用安全樣式 */
-body,
-.app-container {
+body, .app-container {
   font-family: var(--user-font-text);
 }
 
 /* 標題與強調樣式 */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong,
-b {
+h1, h2, h3, h4, h5, h6, strong, b {
   font-family: var(--user-font-text);
   font-weight: 700;
 }
@@ -947,23 +872,19 @@ b {
 .mermaid svg {
   max-width: 100%;
   height: auto;
-  transition: all 0.3s ease;
-  /* 加入 0.3秒 的平滑動畫效果 */
-  cursor: zoom-in;
-  /* 滑鼠游標變成放大鏡 */
+  transition: all 0.3s ease; /* 加入 0.3秒 的平滑動畫效果 */
+  cursor: zoom-in; /* 滑鼠游標變成放大鏡 */
 }
 
 /* 互動狀態：當滑鼠「懸停」在圖表上時 */
 .mermaid:hover svg {
-  max-width: none;
-  /* 解除寬度限制，恢復原始大小 */
-  min-width: 100%;
-  /* 確保至少填滿畫面 */
+  max-width: none; /* 解除寬度限制，恢復原始大小 */
+  min-width: 100%; /* 確保至少填滿畫面 */
 }
 
 /* 讓容器在變寬時可以左右捲動，而不是撐破版面 */
 .mermaid:hover {
-  overflow-x: auto;
+    overflow-x: auto;
 }
 
 /* ===============================================================
@@ -974,58 +895,46 @@ b {
   /* === 🎛️ MASTER SWITCH === */
   /* Change this ONE value to scale the entire presentation */
   /* Recommended: 20px to 40px depending on screen size */
-  --slide-base-size: 20px;
+  --slide-base-size: 20px; 
 
   /* === 📐 RATIOS (Multipliers) === */
   /* These define how much bigger headers are compared to normal text */
-  --h1-ratio: 1.9;
-  /* H1 is 2.5x bigger than base */
+  --h1-ratio: 1.9;  /* H1 is 2.5x bigger than base */
   --h2-ratio: 1.7;
   --h3-ratio: 1.5;
   --h4-ratio: 1.3;
   --h5-ratio: 1.2;
   --h6-ratio: 1.1;
-  --code-ratio: 0.85;
-  /* Code is usually slightly smaller */
+  --code-ratio: 0.85; /* Code is usually slightly smaller */
 
   /* === ⚙️ CALCULATIONS (Do not touch these usually) === */
   --p-size: var(--slide-base-size);
-
+  
   --user-h1-size: calc(var(--slide-base-size) * var(--h1-ratio));
   --user-h2-size: calc(var(--slide-base-size) * var(--h2-ratio));
   --user-h3-size: calc(var(--slide-base-size) * var(--h3-ratio));
   --user-h4-size: calc(var(--slide-base-size) * var(--h4-ratio));
   --user-h5-size: calc(var(--slide-base-size) * var(--h5-ratio));
   --user-h6-size: calc(var(--slide-base-size) * var(--h6-ratio));
-
+  
   --user-code-size: calc(var(--slide-base-size) * var(--code-ratio));
 }
 
 /* 2. 版面配置與滾動條 (強制內容可滾動) */
-.reveal .slides>section,
-.reveal .slides>section>section,
+.reveal .slides > section,
+.reveal .slides > section > section,
 .reveal .slides section {
-  overflow-y: auto;
-  /* 內容過長時顯示滾動條 */
-  height: 100%;
-  /*以此確保滾動條正常運作 */
+  overflow-y: auto;  /* 內容過長時顯示滾動條 */
+  height: 100%;      /*以此確保滾動條正常運作 */
   display: block;
-  text-align: left;
-  /* 強制靠左對齊 */
+  text-align: left;  /* 強制靠左對齊 */
 }
 
 /* ==排版與字體大小== */
 
 /* 3. 對齊重置 (強制靠左) */
-.reveal h1,
-.reveal h2,
-.reveal h3,
-.reveal h4,
-.reveal h5,
-.reveal h6,
-.reveal p,
-.reveal ul,
-.reveal ol {
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6, 
+.reveal p, .reveal ul, .reveal ol {
   text-align: left;
   margin-left: 0;
 }
@@ -1049,36 +958,30 @@ b {
   color: var(--h3-gradient);
 }
 
-.reveal h4,
-.reveal h5,
-.reveal h6 {
+.reveal h4, .reveal h5, .reveal h6 {
   font-size: var(--user-h4-size);
   text-transform: none;
   color: var(--user-text-muted);
 }
 
 /* 5. 內文與列表 (p, li 統一大小) */
-.reveal p,
+.reveal p, 
 .reveal li,
 .reveal ol {
-  font-size: var(--slide-base-size);
-  /* 參照上方的變數設定 */
+  font-size: var(--slide-base-size); /* 參照上方的變數設定 */
   line-height: 1.5;
 }
 
 /* Adjust text size inside code blocks */
 .reveal pre {
-  font-size: var(--user-code-size);
-  /* Increase/Decrease this value */
-  font-family: 'Fira Code', 'Consolas', monospace;
-  /* Optional: Change font */
+  font-size: var(--user-code-size);  /* Increase/Decrease this value */
+  font-family: 'Fira Code', 'Consolas', monospace; /* Optional: Change font */
 }
 
 
 /* 7. 表格樣式 */
 .reveal table {
-  font-size: var(--slide-base-size);
-  /* 跟隨內文大小 */
+  font-size: var(--slide-base-size); /* 跟隨內文大小 */
   line-height: 1.2;
   display: block;
   overflow: auto;
@@ -1087,8 +990,7 @@ b {
 }
 
 .reveal table th {
-  position: sticky;
-  /* 固定表頭 */
+  position: sticky; /* 固定表頭 */
   top: 0;
   background-color: var(--background-primary);
   z-index: 1;
@@ -1097,26 +999,24 @@ b {
 /* 1. Reset the Callout Container */
 .reveal .callout {
   /* Force the callout to use your base size variable */
-  font-size: var(--slide-base-size);
-
+  font-size: var(--slide-base-size); 
+  
   /* Optional: Fix spacing around the box */
   margin: 1em 0;
   line-height: 1.4;
-  border-radius: 8px;
-  /* Softer corners */
+  border-radius: 8px; /* Softer corners */
 }
 
 /* 2. Fix the Huge Title */
 .reveal .callout-title {
   /* Set title size to be just slightly larger than base text */
-  font-size: 1.1rem;
+  font-size: 1.1rem; 
   color: var(--user-text-muted);
-
+  
   /* Ensure padding looks normal */
   padding: 0.5rem 1rem;
   display: flex;
-  align-items: center;
-  /* Vertically align icon and text */
+  align-items: center; /* Vertically align icon and text */
 }
 
 /* 3. Fix the Icon Size */
@@ -1125,8 +1025,7 @@ b {
   width: 1.2rem;
   height: 1.2rem;
   margin-right: 0.5rem;
-  display: flex;
-  /* Fix alignment issues */
+  display: flex; /* Fix alignment issues */
 }
 
 .reveal .callout-icon svg {
@@ -1157,60 +1056,25 @@ b {
 }
 
 /* Assign variables to the 6 Canvas slots */
-.mod-canvas-color-1 {
-  --canvas-color: var(--canvas-red);
-}
-
-.mod-canvas-color-2 {
-  --canvas-color: var(--canvas-orange);
-}
-
-.mod-canvas-color-3 {
-  --canvas-color: var(--canvas-yellow);
-}
-
-.mod-canvas-color-4 {
-  --canvas-color: var(--canvas-green);
-}
-
-.mod-canvas-color-5 {
-  --canvas-color: var(--canvas-blue);
-}
-
-.mod-canvas-color-6 {
-  --canvas-color: var(--canvas-purple);
-}
+.mod-canvas-color-1 { --canvas-color: var(--canvas-red); }
+.mod-canvas-color-2 { --canvas-color: var(--canvas-orange); }
+.mod-canvas-color-3 { --canvas-color: var(--canvas-yellow); }
+.mod-canvas-color-4 { --canvas-color: var(--canvas-green); }
+.mod-canvas-color-5 { --canvas-color: var(--canvas-blue); }
+.mod-canvas-color-6 { --canvas-color: var(--canvas-purple); }
 
 /* Update the UI Menu Circles to match */
-.canvas-color-picker-item.mod-color-1 {
-  background-color: rgb(var(--canvas-red));
-}
-
-.canvas-color-picker-item.mod-color-2 {
-  background-color: rgb(var(--canvas-orange));
-}
-
-.canvas-color-picker-item.mod-color-3 {
-  background-color: rgb(var(--canvas-yellow));
-}
-
-.canvas-color-picker-item.mod-color-4 {
-  background-color: rgb(var(--canvas-green));
-}
-
-.canvas-color-picker-item.mod-color-5 {
-  background-color: rgb(var(--canvas-blue));
-}
-
-.canvas-color-picker-item.mod-color-6 {
-  background-color: rgb(var(--canvas-purple));
-}
+.canvas-color-picker-item.mod-color-1 { background-color: rgb(var(--canvas-red)); }
+.canvas-color-picker-item.mod-color-2 { background-color: rgb(var(--canvas-orange)); }
+.canvas-color-picker-item.mod-color-3 { background-color: rgb(var(--canvas-yellow)); }
+.canvas-color-picker-item.mod-color-4 { background-color: rgb(var(--canvas-green)); }
+.canvas-color-picker-item.mod-color-5 { background-color: rgb(var(--canvas-blue)); }
+.canvas-color-picker-item.mod-color-6 { background-color: rgb(var(--canvas-purple)); }
 
 /* Change the overall Canvas background color */
 .canvas-wrapper {
-  background-color: var(--user-canvas-bg);
+    background-color: var(--user-canvas-bg);
 }
-
 /* remove the dots in canvas background */
 svg.canvas-background {
   display: none;
@@ -1220,13 +1084,12 @@ svg.canvas-background {
 .theme-light .canvas-node .canvas-node-container,
 .theme-light .canvas-node.is-themed .canvas-node-container {
   border: none;
-  box-shadow:
+  box-shadow: 
     var(--canvas-float-highlight),
-    var(--canvas-float-lowlight),
-    var(--canvas-float-shadow-1),
+    var(--canvas-float-lowlight), 
+    var(--canvas-float-shadow-1), 
     var(--canvas-float-shadow-2);
-  background-color: var(--user-canvas-node);
-  /* A slightly lighter grey to stand out */
+  background-color: var(--user-canvas-node); /* A slightly lighter grey to stand out */
   border-radius: 10px;
 }
 
@@ -1236,8 +1099,7 @@ svg.canvas-background {
   box-shadow:
     var(--canvas-float-highlight),
     var(--canvas-float-lowlight);
-  background-color: var(--user-canvas-node);
-  /* A slightly lighter grey to stand out */
+  background-color: var(--user-canvas-node); /* A slightly lighter grey to stand out */
   border-radius: 10px;
 }
 
@@ -1249,12 +1111,12 @@ svg.canvas-background {
   background-color: rgba(var(--canvas-color), 0.19);
 }
 
-.canvas-node.is-selected,
+.canvas-node.is-selected, 
 .canvas-node.is-focused {
   border: 2px solid var(--interactive-accent);
   border-radius: 10px;
   /* Optional: adds a slight glow */
-  box-shadow: 0 0 10px var(--interactive-accent);
+  box-shadow: 0 0 10px var(--interactive-accent); 
 }
 
 /*
@@ -1264,10 +1126,10 @@ Workspace Decoration
 */
 .workspace-split.mod-root,
 .workspace-tabs.mod-top-right-space {
-  background-color: var(--user-bg-pink-soft);
+	background-color: var(--user-bg-pink-soft);
 }
 
-.mod-left-split .workspace-sidedock-vault-profile {
+.mod-left-split .workspace-sidedock-vault-profile { 
   border-top: transparent;
 }
 
@@ -1275,27 +1137,26 @@ Workspace Decoration
   border-bottom: transparent;
 }
 
-.mod-root .mod-top-left-space .workspace-tab-container,
-.mod-root .mod-top-right-space .workspace-tab-container,
-.mod-root .mod-top .workspace-tab-container {
+.mod-root .workspace-tabs .workspace-tab-container,
+.mod-root .workspace-tabs .workspace-tab-container {
   margin-left: 0.6rem;
   margin-right: 0.6rem;
   margin-bottom: 0.6rem;
   border-radius: 10px;
 
-  box-shadow:
+  box-shadow: 
     var(--float-highlight),
-    var(--float-lowlight),
-    var(--float-shadow-1),
+    var(--float-lowlight), 
+    var(--float-shadow-1), 
     var(--float-shadow-2);
 }
 
 /* resize handle when split tab */
-.workspace-split.mod-vertical>*>.workspace-leaf-resize-handle {
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle {
   border-inline-end-style: none;
 }
 
-.workspace-split.mod-horizontal>*>.workspace-leaf-resize-handle {
+.workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
   border-bottom-style: none;
 }
 
@@ -1307,13 +1168,11 @@ Workspace Decoration
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
-
 .mod-root .workspace-tab-header.is-active {
-  box-shadow:
+  box-shadow: 
     var(--float-highlight),
     var(--float-lowlight);
 }
-
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
   margin-left: 0px;
   margin-right: 0px;
@@ -1322,7 +1181,7 @@ Workspace Decoration
 .workspace-split.mod-root .workspace-tab-header-container .workspace-tab-header.is-active::before,
 .workspace-split.mod-root .workspace-tab-header-container .workspace-tab-header.is-active::after {
   --tab-curve: 12px;
-  box-shadow:
+  box-shadow: 
     0 0 0 calc(var(--tab-curve) * 4) var(--user-bg-white);
 }
 
@@ -1336,8 +1195,8 @@ Workspace Decoration
 /* The tab header at left sidebar */
 .mod-left-split .workspace-tab-header.is-active {
   background-color: transparent;
-
-  border-bottom-left-radius: 5px;
+  
+  border-bottom-left-radius:  5px;
   border-bottom-right-radius: 5px;
 
   box-shadow:
@@ -1347,12 +1206,12 @@ Workspace Decoration
     inset 0 -1px 0 0 var(--user-accent-main);
 }
 
-.popover.hover-editor>.popover-content {
+.popover.hover-editor > .popover-content {
   border-radius: 10px;
-  box-shadow:
+  box-shadow: 
     var(--float-highlight),
-    var(--float-lowlight),
-    var(--float-shadow-1),
+    var(--float-lowlight), 
+    var(--float-shadow-1), 
     var(--float-shadow-2);
 }
 
@@ -1367,14 +1226,14 @@ Workspace Decoration
    Omniseaerch Styling
    ====================== */
 /* .search-result:not(.better-search-views-tree-item-children .search-result), */
-.tree-item.search-result>.search-result-file-matches:has(.better-search-views-tree),
+.tree-item.search-result > .search-result-file-matches:has(.better-search-views-tree),
 .omnisearch-result {
   border-radius: 10px;
-  box-shadow:
-    var(--float-highlight),
-    var(--float-lowlight),
-    var(--float-shadow-1),
-    var(--float-shadow-2);
+  box-shadow: 
+      var(--float-highlight),
+      var(--float-lowlight), 
+      var(--float-shadow-1), 
+      var(--float-shadow-2);
   margin-bottom: 0.5rem;
 }
 
