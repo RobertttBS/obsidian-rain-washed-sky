@@ -1239,7 +1239,8 @@ Workspace Decoration
 
 .multi-select-pill-content,
 .vertical-tab-nav-item-title,
-.setting-item-description,
+.metadata-property-value .internal-link, .markdown-rendered .internal-link,
+.metadata-property-value .multi-select-container,
 .tree-item-inner {
   padding-bottom: 3px;
   margin-bottom: -3px;
