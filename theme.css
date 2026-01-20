@@ -684,9 +684,11 @@ hr {
 /* Note: Edit mode cannot be made into a 'single box', so we only sync 'background color' and 'text color',
    and keep the left side line, making it look neat when editing, unlike broken blocks.
 */
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-quote,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-quote .cm-quote,
+.markdown-rendered blockquote,
 .markdown-source-view.mod-cm6 .HyperMD-quote {
   background-color: var(--user-bg-blockquote);
-  color: var(--user-text-main);
 }
 
 /*
