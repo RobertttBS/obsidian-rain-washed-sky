@@ -1082,21 +1082,21 @@ svg.canvas-background {
   display: none;
 }
 
-/* 1. Remove border and shadow from the container */
-.theme-light .canvas-node .canvas-node-container,
-.theme-light .canvas-node.is-themed .canvas-node-container {
+/* 1. Remove border and shadow from the container (Excluding Groups) */
+.theme-light .canvas-node:not(.canvas-node-group) .canvas-node-container,
+.theme-light .canvas-node.is-themed:not(.canvas-node-group) .canvas-node-container {
   border: none;
   box-shadow: 
     var(--canvas-float-highlight),
     var(--canvas-float-lowlight), 
     var(--canvas-float-shadow-1), 
     var(--canvas-float-shadow-2);
-  background-color: var(--user-canvas-node); /* A slightly lighter grey to stand out */
+  background-color: var(--user-canvas-node);
   border-radius: 10px;
 }
 
-.theme-dark .canvas-node .canvas-node-container,
-.theme-dark .canvas-node.is-themed .canvas-node-container {
+.theme-dark .canvas-node:not(.canvas-node-group) .canvas-node-container,
+.theme-dark .canvas-node.is-themed:not(.canvas-node-group) .canvas-node-container {
   border: none;
   box-shadow:
     var(--canvas-float-highlight),
