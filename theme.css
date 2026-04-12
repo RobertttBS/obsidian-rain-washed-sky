@@ -66,6 +66,7 @@
   /* === 介面 === */
   --user-border-light:    #B0C4C4;
   --user-selection:       rgba(255, 213, 0, 0.4);
+  --user-canvas-selection:#FF69B4;
 
   /* === Callout === */
   --user-accent-tip:      #74bfbb;
@@ -152,6 +153,7 @@
   /* === 介面 === */
   --user-border-light:    #3A5F5F;
   --user-selection:       rgba(255, 213, 0, 0.4);
+  --user-canvas-selection:#FF69B4;
 
   /* === Callout 專用色系 (新增/深色適配) === */
   --user-accent-tip:      #55e9cc;
@@ -557,7 +559,7 @@ hr {
 /* Search Result Highlight, with dynamic highlighter plugin */
 .cm-s-obsidian span.cm-matched-string,
 .markdown-source-view.mod-cm6 .cm-s-obsidian span.cm-matched-string {
-  background-color: rgba(255, 215, 0, 0.4); /* Gold background */
+  background-color: var(--user-selection); /* Gold background */
   text-decoration: none; /* Remove underline */
   color: inherit; /* Avoid text color being overwritten by other styles */
   border-radius: 3px;
@@ -609,13 +611,13 @@ hr {
  Adjust Obsidian Canvas node selection style
  =================================================== */
 .canvas-node.is-selected .canvas-node-container, .canvas-node.is-focused .canvas-node-container {
-  border-color: #FF69B4; /* var(--user-accent-strong); */
+  border-color: var(--user-canvas-selection);
 }
 
 .canvas-selection.mod-group-selection {
   border-width: 3px;
   border-radius: 3px;
-  border-color: #FF69B4; /* var(--user-accent-strong); */
+  border-color: var(--user-canvas-selection);
   pointer-events: initial;
 }
 
