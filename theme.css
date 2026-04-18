@@ -64,7 +64,7 @@
   --link-unresolved-color: #4c9677;
 
   /* === 介面 === */
-  --user-border-light:    #B0C4C4;
+  --user-border-light:    var(--user-bg-pink-soft);
   --user-selection:       rgba(255, 213, 0, 0.4);
   --user-canvas-selection:#FF69B4;
 
@@ -151,7 +151,7 @@
   --link-unresolved-color: #A2D99E;
 
   /* === 介面 === */
-  --user-border-light:    #3A5F5F;
+  --user-border-light:    var(--user-bg-pink-soft);
   --user-selection:       rgba(255, 213, 0, 0.4);
   --user-canvas-selection:#FF69B4;
 
