@@ -113,9 +113,17 @@
   --user-tag-color-hover:      #E74C3C;
   
   /* 背景：帶有粉橘調的淺紅，像宣紙上的硃砂暈染 */
-  --user-tag-background:       #FADBD8; 
+  --user-tag-background:       #FADBD8;
   /* Hover 背景：加強飽和度，變成溫暖的杏桃色 */
   --user-tag-background-hover: #F5CBA7;
+
+  /* === Canvas Node Decoration === */
+  --canvas-red: 255, 100, 100;
+  --canvas-orange: 255, 175, 70;
+  --canvas-yellow: 255, 230, 100;
+  --canvas-green: 107, 142, 35;
+  --canvas-blue: 100, 200, 255;
+  --canvas-purple: 180, 150, 255;
 }
 
 /* --- 🌙 深色模式：青花為海，汝瓷為星 --- */
@@ -204,6 +212,14 @@
   --user-tag-background:       rgba(255, 215, 0, 0.15);
   /* Hover 背景：提高亮度和不透明度，產生光暈感 */
   --user-tag-background-hover: rgba(255, 215, 0, 0.25);
+
+  /* === Canvas Node Decoration === */
+  --canvas-red: 255, 90, 90;
+  --canvas-orange: 255, 103, 0;
+  --canvas-yellow: 255, 230, 100;
+  --canvas-green: 100, 200, 150;
+  --canvas-blue: 80, 180, 255;
+  --canvas-purple: 180, 150, 255;
 }
 
 /* ===============================================================
@@ -272,6 +288,8 @@ body {
   --tag-color-hover: var(--user-tag-color-hover);
   --tag-background: var(--user-tag-background);
   --tag-background-hover: var(--user-tag-background-hover);
+
+  --file-header-font: var(--user-font-text);
 }
 
 /* --- 互動 --- */
@@ -460,6 +478,7 @@ body.theme-dark ::-webkit-scrollbar-track {
 
 .callout-title {
   color: var(--user-callout-title);
+  padding: 10px 14px 6px 14px;
 }
 
 .callout:hover {
@@ -477,7 +496,6 @@ body.theme-dark ::-webkit-scrollbar-track {
   border: none;
 }
 
-.callout-title { padding: 10px 14px 6px 14px; }
 .callout-content { padding: 0 14px 14px 14px; }
 
 /* ===============================================================
@@ -789,10 +807,6 @@ Note Embeds style
   --letter-spacing-norm: 0.05em;
 }
 
-body {
-  --file-header-font: var(--user-font-text);
-}
-
 /* 核心區域：針對「筆記內容」套用完整樣式 */
 /* 閱讀模式 (Reading View) */
 .markdown-preview-view {
@@ -1043,24 +1057,6 @@ h1, h2, h3, h4, h5, h6, strong, b {
 /* ===============================================================
    Canvas Node Decoration
    =============================================================== */
-.theme-light {
-  --canvas-red: 255, 100, 100;
-  --canvas-orange: 255, 175, 70;
-  --canvas-yellow: 255, 230, 100;
-  --canvas-green: 107, 142, 35;
-  --canvas-blue: 100, 200, 255;
-  --canvas-purple: 180, 150, 255;
-}
-
-.theme-dark {
-  --canvas-red: 255, 90, 90;
-  --canvas-orange: 255, 103, 0;
-  --canvas-yellow: 255, 230, 100;
-  --canvas-green: 100, 200, 150;
-  --canvas-blue: 80, 180, 255;
-  --canvas-purple: 180, 150, 255;
-}
-
 /* Assign variables to the 6 Canvas slots */
 .mod-canvas-color-1 { --canvas-color: var(--canvas-red); }
 .mod-canvas-color-2 { --canvas-color: var(--canvas-orange); }
