@@ -1139,7 +1139,6 @@ Workspace Decoration
   border-bottom: transparent;
 }
 
-.mod-root .workspace-tabs .workspace-tab-container,
 .mod-root .workspace-tabs .workspace-tab-container {
   margin-left: 0.6rem;
   margin-right: 0.6rem;
@@ -1228,7 +1227,7 @@ Workspace Decoration
    Omniseaerch Styling
    ====================== */
 /* .search-result:not(.better-search-views-tree-item-children .search-result), */
-.tree-item.search-result > .search-result-file-matches:has(.better-search-views-tree),
+.better-search-views-tree,
 .omnisearch-result {
   border-radius: 10px;
   box-shadow: 
