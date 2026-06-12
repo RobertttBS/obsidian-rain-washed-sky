@@ -870,7 +870,12 @@ h1, h2, h3, h4, h5, h6, strong, b {
   height: auto;
 }
 
-/* Mobile-Specific Fixes */
+/* ===============================================================
+   Descender-clip fix (原有跨平台選擇器)
+   字體有較高 descender，下列單行 UI 文字會被容器裁切
+   通用解法：padding-bottom + 等量負 margin-bottom，補空間不影響佈局
+   範圍維持原樣（部分桌機亦適用），避免回退已驗證的修正
+   =============================================================== */
 .is-phone .modal-title,
 .setting-item-control,
 .setting-item-control select,
@@ -886,6 +891,94 @@ h1, h2, h3, h4, h5, h6, strong, b {
 .setting-item-name {
   padding-bottom: 3px;
   margin-bottom: -3px;
+}
+
+/* ===============================================================
+   Descender-clip fix (行動端擴充)
+   範圍：限定行動端 (.is-mobile)，避免影響桌機既有版面與既有規則
+   (.workspace .mod-root .workspace-tab-header-inner-title 等)
+   :where() 把整段選擇器特異度壓為 0，方便其他規則覆蓋
+   不套用於 flex 子元素 / 按鈕：負 margin 會破壞對齊
+   =============================================================== */
+.is-mobile :where(
+    /* 上方導覽列（只套用於文字葉節點，避免父子重複加 padding） */
+    .mobile-navbar-title-text,
+    /* 側邊抽屜 */
+    .workspace-drawer-vault-name,
+    .workspace-drawer-active-note-title,
+    .workspace-drawer-active-note-meta,
+    /* 底部工具列 */
+    .mobile-toolbar-option-name,
+    /* Tab 切換器 */
+    .mobile-tab-switcher-title,
+    /* Modal 與設定 */
+    .modal-title,
+    .setting-item-description,
+    /* 工作區分頁標題（leaf；root 分頁由 .workspace .mod-root 規則處理） */
+    .workspace-leaf-header-title,
+    /* 搜尋結果 */
+    .search-result-file-title,
+    .search-result-file-matched-text,
+    /* 大綱 / 反向連結 */
+    .tree-item-self .tree-item-inner-subtext,
+    /* 社群外掛 / 主題瀏覽器 */
+    .community-item-name,
+    .community-item-author,
+    .community-item-stats,
+    .community-modal-info-name,
+    /* 嵌入區塊標題 */
+    .markdown-embed-title,
+    .file-embed-title
+  ) {
+  padding-bottom: 3px;
+  margin-bottom: -3px;
+}
+
+/* ===============================================================
+   Descender-clip fix (行動端下拉選單)
+   <select> 會把文字裁切在 line box 內，padding 補償無效
+   app.css 的 line-height-tight (1.3) 小於字體實際高度 (~1.44em)
+   拉高 line-height 讓 line box 容納 descender；select 高度固定
+   (--input-height) 且文字垂直置中，不會撐高版面
+   =============================================================== */
+.is-mobile .dropdown,
+.is-mobile .setting-item-control select {
+  line-height: var(--line-height-normal);
+}
+
+/* ===============================================================
+   行動裝置：UI 字體 / 字距一致性
+   把全域 UI 也納入襯線字體與寬字距，避免行動端介面與內文落差
+   line-height 僅套在文字較多的容器，避免控制元件被撐高
+   =============================================================== */
+.is-mobile .mobile-navbar,
+.is-mobile .mobile-toolbar,
+.is-mobile .mobile-tab-switcher,
+.is-mobile .workspace-drawer,
+.is-mobile .workspace-drawer-vault-name,
+.is-mobile .workspace-drawer-active-note-title,
+.is-mobile .menu,
+.is-mobile .menu-item,
+.is-mobile .modal,
+.is-mobile .modal-title,
+.is-mobile .view-header,
+.is-mobile .view-header-title,
+.is-mobile .status-bar,
+.is-mobile .tooltip,
+.is-mobile .community-item-name,
+.is-mobile .community-item-author {
+  font-family: var(--user-font-text);
+  letter-spacing: var(--letter-spacing-norm);
+}
+
+/* 文字較多、非控制元件、非 line-clamp 的容器額外套 line-height
+   - 排除 .modal-content：範圍涵蓋整個設定面板，會把 form row 一起撐高
+   - 排除 .community-modal-readme：已由 .community-modal-readme 共用規則覆蓋
+   - 排除 .community-item-desc：卡片內已使用 -webkit-line-clamp，行高放大會提前截斷
+   letter-spacing 透過 .is-mobile .modal 祖先繼承，不需在此重複宣告 */
+.is-mobile .setting-item-description,
+.is-mobile .community-modal-info {
+  line-height: var(--line-height-normal);
 }
 
 /* 預設狀態：限制在視窗寬度內，強迫縮小以適應版面 */
