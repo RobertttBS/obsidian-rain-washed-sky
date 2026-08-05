@@ -1159,12 +1159,12 @@ h1, h2, h3, h4, h5, h6, strong, b {
 .mod-canvas-color-6 { --canvas-color: var(--canvas-purple); }
 
 /* Update the UI Menu Circles to match */
-.canvas-color-picker-item.mod-color-1 { background-color: rgb(var(--canvas-red)); }
-.canvas-color-picker-item.mod-color-2 { background-color: rgb(var(--canvas-orange)); }
-.canvas-color-picker-item.mod-color-3 { background-color: rgb(var(--canvas-yellow)); }
-.canvas-color-picker-item.mod-color-4 { background-color: rgb(var(--canvas-green)); }
-.canvas-color-picker-item.mod-color-5 { background-color: rgb(var(--canvas-blue)); }
-.canvas-color-picker-item.mod-color-6 { background-color: rgb(var(--canvas-purple)); }
+.canvas-color-picker-item.mod-canvas-color-1 { background-color: rgb(var(--canvas-red)); }
+.canvas-color-picker-item.mod-canvas-color-2 { background-color: rgb(var(--canvas-orange)); }
+.canvas-color-picker-item.mod-canvas-color-3 { background-color: rgb(var(--canvas-yellow)); }
+.canvas-color-picker-item.mod-canvas-color-4 { background-color: rgb(var(--canvas-green)); }
+.canvas-color-picker-item.mod-canvas-color-5 { background-color: rgb(var(--canvas-blue)); }
+.canvas-color-picker-item.mod-canvas-color-6 { background-color: rgb(var(--canvas-purple)); }
 
 /* Change the overall Canvas background color */
 .canvas-wrapper {
