@@ -1150,13 +1150,19 @@ h1, h2, h3, h4, h5, h6, strong, b {
 /* ===============================================================
    Canvas Node Decoration
    =============================================================== */
-/* Assign variables to the 6 Canvas slots */
-.mod-canvas-color-1 { --canvas-color: var(--canvas-red); }
-.mod-canvas-color-2 { --canvas-color: var(--canvas-orange); }
-.mod-canvas-color-3 { --canvas-color: var(--canvas-yellow); }
-.mod-canvas-color-4 { --canvas-color: var(--canvas-green); }
-.mod-canvas-color-5 { --canvas-color: var(--canvas-blue); }
-.mod-canvas-color-6 { --canvas-color: var(--canvas-purple); }
+/* Assign variables to the 6 Canvas slots.
+   Obsidian 1.13+ resolves --canvas-color to a full color value (it is fed
+   straight into `stroke`, `border` and `color-mix`), so the palette must be
+   handed over as rgb() and not as a bare RGB triple. A bare triple is invalid
+   there and leaves canvas edges/arrows uncolored. */
+body {
+  --canvas-color-1: rgb(var(--canvas-red));
+  --canvas-color-2: rgb(var(--canvas-orange));
+  --canvas-color-3: rgb(var(--canvas-yellow));
+  --canvas-color-4: rgb(var(--canvas-green));
+  --canvas-color-5: rgb(var(--canvas-blue));
+  --canvas-color-6: rgb(var(--canvas-purple));
+}
 
 /* Update the UI Menu Circles to match */
 .canvas-color-picker-item.mod-canvas-color-1 { background-color: rgb(var(--canvas-red)); }
@@ -1199,11 +1205,11 @@ svg.canvas-background {
 }
 
 .theme-light .canvas-node.is-themed .canvas-node-content {
-  background-color: rgba(var(--canvas-color), 0.17);
+  background-color: color-mix(in oklch, var(--canvas-color) 17%, transparent);
 }
 
 .theme-dark .canvas-node.is-themed .canvas-node-content {
-  background-color: rgba(var(--canvas-color), 0.19);
+  background-color: color-mix(in oklch, var(--canvas-color) 19%, transparent);
 }
 
 .canvas-node.is-selected, 
