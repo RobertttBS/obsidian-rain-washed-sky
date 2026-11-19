@@ -1257,6 +1257,20 @@ Workspace Decoration
 }
 
 /* Adjust tab header */
+.mod-root .workspace-tab-header-container-inner {
+  margin-top: 0;
+  /* 第一個 tab 左緣對齊筆記區左緣：container 8px - inner margin 6px + tab margin 4px + 此值 = 0.6rem */
+  padding-left: calc(0.6rem - 6px);
+}
+
+/* 第一個 tab 啟用時：筆記區左上角改直角、隱藏左側反向圓角，避免尖端 */
+.mod-root .workspace-tabs:not(.mod-stacked):has(.workspace-tab-header:first-child.is-active) > .workspace-tab-container {
+  border-top-left-radius: 0;
+}
+.workspace-split.mod-root .workspace-tab-header-container .workspace-tab-header.is-active:first-child::before {
+  display: none;
+}
+
 .mod-root .workspace-tab-header.is-active,
 .workspace .mod-root .workspace-tab-header {
   margin-left: 4px;
@@ -1265,9 +1279,9 @@ Workspace Decoration
   border-bottom-right-radius: 8px;
 }
 .mod-root .workspace-tab-header.is-active {
-  box-shadow: 
-    var(--float-highlight),
-    var(--float-lowlight);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: var(--float-highlight);
 }
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
   margin-left: 0px;
