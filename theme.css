@@ -985,23 +985,15 @@ h1, h2, h3, h4, h5, h6, strong, b {
   line-height: var(--line-height-normal);
 }
 
-/* 預設狀態：限制在視窗寬度內，強迫縮小以適應版面 */
-.mermaid svg {
+/* Mermaid 圖表樣式：筆記內水平滾動檢視，不強制縮小文字 */
+.mermaid {
   max-width: 100%;
+  overflow-x: auto;
+}
+
+.mermaid svg {
+  max-width: none;
   height: auto;
-  transition: all 0.3s ease; /* 加入 0.3秒 的平滑動畫效果 */
-  cursor: zoom-in; /* 滑鼠游標變成放大鏡 */
-}
-
-/* 互動狀態：當滑鼠「懸停」在圖表上時 */
-.mermaid:hover svg {
-  max-width: none; /* 解除寬度限制，恢復原始大小 */
-  min-width: 100%; /* 確保至少填滿畫面 */
-}
-
-/* 讓容器在變寬時可以左右捲動，而不是撐破版面 */
-.mermaid:hover {
-    overflow-x: auto;
 }
 
 /* ===============================================================
