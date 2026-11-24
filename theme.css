@@ -58,6 +58,9 @@ settings:
             -
                 label: Ink & Cinnabar (水墨朱砂)
                 value: rws-palette-ink-cinnabar
+            -
+                label: Peach Blossom (桃夭)
+                value: rws-palette-peach-blossom
     -
         id: rws-overrides
         title: Color overrides
@@ -1030,6 +1033,179 @@ settings:
   --canvas-green: 100, 200, 150;
   --canvas-blue: 80, 180, 255;
   --canvas-purple: 180, 150, 255;
+}
+
+/* --- Palette: Peach Blossom --- */
+.theme-light.rws-palette-peach-blossom {
+  /* === 基底 (桃花粉霧：更粉更淡) === */
+  --user-bg-white:        #FDF5F7;
+  --user-bg-pink-pale:    #FAEEF1;
+  --user-bg-pink-soft:    #F8E9EC;
+  --user-bg-pink-deep:    #F4DFE4;
+  --user-bg-blockquote:   #F9EBEF;
+  --user-active-line:     #F7E5EA;
+  --user-canvas-bg:       #FDF8FA;
+  --user-canvas-node:     #FBF2F5;
+
+  /* === 文字與粗體 (海之湛藍，對比同 default) === */
+  --user-text-main:        #1D3557;
+  --user-text-muted:       #4A5F80;
+  --user-text-faint:       #8A9BB5;
+  /* 粗體：深海藍 */
+  --user-text-bold:        #12233D;
+
+  /* === 標題漸層 (湛藍濃淡) === */
+  --h1-gradient:           #1D3557;
+  --h2-gradient:           #2B4C7E;
+  --h3-gradient:           #45699A;
+
+  /* === 強調與連結 === */
+  --user-accent-main:      #2B4C7E;
+  --user-accent-strong:    #B8476A; /* 乾燥玫瑰 (僅用於強調/警示) */
+  --user-accent-highlight: #F7D4DD;
+
+  --user-link-internal:    #2A6F8F;
+  --user-link-external:    #3567B0;
+  --link-unresolved-color: #2A6F8F;
+
+  /* === 介面 === */
+  --user-border-light:       #E7CAD1;
+  --user-selection:        rgba(29, 53, 87, 0.15);
+  --user-canvas-selection: #1D3557;
+
+  /* === Callout 專用色系 === */
+  --user-accent-tip:       #5FB3A8;
+  --user-accent-success:   #6E9B5A;
+  --user-accent-warning:   #D9A441;
+  --user-accent-info:      #4A7FB5;
+  --user-accent-error:     #D23A5A;
+  --user-accent-quote:     #9AA5B4;
+  --user-accent-example:   #7B6FCF;
+  --user-accent-background: #B45FA6;
+  --user-callout-title:    #12233D;
+
+  --user-theme-pop:        #D98AA3;
+
+  /* --- 3D 浮動陰影 (海藍陰影) --- */
+  --float-highlight: inset 0 1.5px 0 0 rgba(255, 255, 255, 0.8);
+  --float-lowlight: inset 0 -1px 0 0 rgba(0, 0, 0, 0.05);
+  --float-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --float-shadow-2: 0 3px 6px -2px rgba(29, 53, 87, 0.15);
+
+  --canvas-float-highlight: inset 0.6px 1px 0 0 rgba(255, 255, 255, 0.9);
+  --canvas-float-lowlight: inset -0.6px -1px 0 0 rgba(0, 0, 0, 0.06);
+  --canvas-float-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --canvas-float-shadow-2: 0 3px 6px -2px rgba(29, 53, 87, 0.3);
+
+  /* HSL 轉換 (#1D3557 普魯士藍) */
+  --accent-h: 216;
+  --accent-s: 50%;
+  --accent-l: 23%;
+
+  --interactive-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --interactive-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 10%));
+
+  /* inline-code 樣式 */
+  --user-inline-code-bg: rgba(29, 53, 87, 0.06);
+  --user-inline-code-text: #2B4C7E;
+
+  /* 標籤：湛藍字配淺藍底，對比粉色背景 */
+  --user-tag-color:            #1D3557;
+  --user-tag-color-hover:      #12233D;
+  --user-tag-background:       #E4EAF3;
+  --user-tag-background-hover: #D3DDEC;
+
+  /* === Canvas Node Decoration === */
+  --canvas-red: 235, 90, 120;
+  --canvas-orange: 245, 160, 110;
+  --canvas-yellow: 240, 210, 110;
+  --canvas-green: 120, 180, 140;
+  --canvas-blue: 110, 160, 230;
+  --canvas-purple: 175, 130, 220;
+}
+
+.theme-dark.rws-palette-peach-blossom {
+  /* === 基底 (夜櫻) === */
+  --user-bg-white:        #0E1A2B;
+  --user-bg-pink-pale:    #13223A;
+  --user-bg-pink-soft:    #182A45;
+  --user-bg-pink-deep:    #213656;
+  --user-bg-blockquote:   #1A2C47;
+  --user-active-line:     #15253C;
+  --user-canvas-bg:       #0C1726;
+  --user-canvas-node:     #14213A;
+
+  /* === 文字 (櫻花粉) === */
+  --user-text-main:        #FBEFF3;
+  --user-text-muted:       #D9BCC7;
+  --user-text-faint:       #8A8398;
+  --user-text-bold:        #FFD9E4;
+
+  /* === 標題漸層 === */
+  --h1-gradient:           #F7B7CA;
+  --h2-gradient:           #EFA3BA;
+  --h3-gradient:           #E48FAA;
+
+  /* === 強調與連結 === */
+  --user-accent-main:      #EFA3BA;
+  --user-accent-strong:    #FF7FA3;
+  --user-accent-highlight: #4A2C40;
+
+  --user-link-internal:    #F4A6BE;
+  --user-link-external:    #A8C8F0;
+  --link-unresolved-color: #F4A6BE;
+
+  /* === 介面 === */
+  --user-border-light:       #2A3F5E;
+  --user-selection:        rgba(239, 163, 186, 0.25);
+  --user-canvas-selection: #F7B7CA;
+
+  /* === Callout 專用色系 === */
+  --user-accent-tip:       #5FD4C4;
+  --user-accent-success:   #7BBF6A;
+  --user-accent-warning:   #F2B55A;
+  --user-accent-info:      #5A9BE0;
+  --user-accent-error:     #FF5C7A;
+  --user-accent-quote:     #A9B6C6;
+  --user-accent-example:   #B38CF0;
+  --user-accent-background: #D48AC8;
+  --user-callout-title:    #FBEFF3;
+
+  --user-theme-pop:        #F4A6BE;
+
+  --float-highlight: inset 0.6px 1px 0 0 rgba(255, 200, 220, 0.06);
+  --float-lowlight: inset -0.6px -1px 0 0 rgba(0, 0, 0, 0.5);
+  --float-shadow-1: 0 2px 3px rgba(0, 0, 0, 0.5);
+  --float-shadow-2: 0 6px 12px -3px rgba(0, 0, 0, 0.6);
+
+  --canvas-float-highlight: inset 1px 2px 0 0 rgba(255, 200, 220, 0.08);
+  --canvas-float-lowlight: inset -1px -2px 0 0 rgba(0, 0, 0, 0.6);
+  --canvas-float-shadow-1: 0 2px 4px rgba(0, 0, 0, 0.6);
+  --canvas-float-shadow-2: 0 8px 16px rgba(0, 0, 0, 0.7);
+
+  /* HSL 轉換 (桃粉按鈕) */
+  --accent-h: 342;
+  --accent-s: 55%;
+  --accent-l: 48%;
+
+  --interactive-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --interactive-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 10%));
+
+  --user-inline-code-bg: #182A45;
+  --user-inline-code-text: #FFB3C8;
+
+  --user-tag-color:            #F7B7CA;
+  --user-tag-color-hover:      #FFD3E0;
+  --user-tag-background:       rgba(239, 163, 186, 0.14);
+  --user-tag-background-hover: rgba(239, 163, 186, 0.24);
+
+  /* === Canvas Node Decoration === */
+  --canvas-red: 255, 100, 130;
+  --canvas-orange: 255, 160, 100;
+  --canvas-yellow: 255, 220, 110;
+  --canvas-green: 110, 200, 150;
+  --canvas-blue: 100, 170, 255;
+  --canvas-purple: 190, 150, 255;
 }
 
 
