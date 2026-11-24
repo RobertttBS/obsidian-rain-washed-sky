@@ -1373,10 +1373,44 @@ input[type="checkbox"]:checked {
 /* ===============================================================
    5. 介面微調 & Scrollbar
    =============================================================== */
-.nav-file-title.is-active,
-.nav-file-title:hover {
-  background-color: var(--user-bg-pink-pale);
-  box-shadow: inset 4px 0 0 0 var(--user-accent-strong);
+.nav-file {
+  position: relative;
+  border-radius: var(--nav-item-radius);
+}
+
+body:not(.is-grabbing) .nav-file:has(> .nav-file-title:hover:not(.is-active)) {
+  background-color: color-mix(in srgb, var(--user-bg-pink-deep) 55%, transparent);
+}
+
+.nav-file:has(> .nav-file-title.is-active) {
+  background-color: var(--user-bg-pink-deep);
+}
+
+body:not(.is-grabbing) .nav-file:has(> .nav-file-title:hover)::before,
+.nav-file:has(> .nav-file-title.is-active)::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 9px;
+  top: 5px;
+  bottom: 5px;
+  width: 2.5px;
+  border-radius: 999px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+body:not(.is-grabbing) .nav-file:has(> .nav-file-title:hover:not(.is-active))::before {
+  background-color: color-mix(in srgb, var(--user-accent-strong) 50%, transparent);
+}
+
+.nav-file:has(> .nav-file-title.is-active)::before {
+  background-color: var(--user-accent-strong);
+}
+
+body:not(.is-grabbing) .nav-files-container .tree-item-self.nav-file-title:hover,
+.nav-files-container .tree-item-self.nav-file-title.is-active:not(.is-being-dragged-over) {
+  background-color: transparent;
+  box-shadow: none;
 }
 
 .collapse-icon {
