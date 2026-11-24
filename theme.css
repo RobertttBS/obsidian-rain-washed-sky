@@ -2278,6 +2278,11 @@ Workspace Decoration
   border-bottom-right-radius: 0;
   box-shadow: var(--float-highlight);
 }
+/* 深色的 float-highlight 帶左側亮邊，但下方筆記區的亮邊被 view-header 蓋住，tab 的亮邊會斷在底部
+   深色模式的 tab 不加亮邊，讓 tab 與筆記區直接接在一起 */
+.theme-dark .mod-root .workspace-tab-header.is-active {
+  box-shadow: none;
+}
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
   margin-left: 0px;
   margin-right: 0px;
