@@ -1314,6 +1314,12 @@ a:hover, .internal-link:hover, .external-link:hover, .cm-link:hover, .cm-url:hov
   text-decoration: none;
 }
 
+/* 設定說明的行高只有 1.3，連結的 hover 背景會往上蓋到前一行的 descender
+   設定頁的連結已經用顏色變化表示 hover，這裡不加背景 */
+.setting-item-description a:hover {
+  background-color: transparent;
+}
+
 /* Tags & Marks */
 .tag, .cm-hashtag {
   background-color: var(--user-tag-background);
@@ -1875,7 +1881,13 @@ h1, h2, h3, h4, h5, h6, strong, b {
 .suggestion-item.mod-complex,
 .suggestion-item.mod-complex .suggestion-title,
 .suggestion-item.mod-complex .suggestion-content,
-.setting-item-name {
+.setting-item-name,
+/* 設定頁：app.css 以 overflow:hidden + line-height-tight 裁切 descender */
+.setting-item-description,
+.setting-item-value,
+.setting-search-result-tab-label,
+.setting-search-result-tab-sublabel,
+.modal-setting-title {
   padding-bottom: 3px;
   margin-bottom: -3px;
 }
