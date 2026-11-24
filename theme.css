@@ -2277,7 +2277,7 @@ Workspace Decoration
 
 /* Adjust tab header */
 .mod-root .workspace-tab-header-container-inner {
-  margin-top: 0;
+  margin-top: 6px; /* tab 上緣對齊右側欄啟用圖示的凹槽上緣（6px + padding-top 1px = 7px） */
   /* 第一個 tab 左緣對齊筆記區左緣：container 8px - inner margin 6px + tab margin 4px + 此值 = 0.6rem */
   padding-left: calc(0.6rem - 6px);
 }
