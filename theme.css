@@ -2280,7 +2280,9 @@ Workspace Decoration
 }
 /* 深色的 float-highlight 帶左側亮邊，但下方筆記區的亮邊被 view-header 蓋住，tab 的亮邊會斷在底部
    深色模式的 tab 不加亮邊，讓 tab 與筆記區直接接在一起 */
-.theme-dark .mod-root .workspace-tab-header.is-active {
+.theme-dark .mod-root .workspace-tab-header.is-active,
+/* 北歐咖啡的 float-highlight 是四邊外框，tab 底部會多一條線，兩側也接不上筆記區 */
+.rws-palette-nordic-espresso .mod-root .workspace-tab-header.is-active {
   box-shadow: none;
 }
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
