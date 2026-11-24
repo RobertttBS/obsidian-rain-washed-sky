@@ -38,6 +38,17 @@ Optimized for the core **Slides** plugin:
 
 ---
 
+## 🎨 Color Palettes (Style Settings)
+
+With the [Style Settings](https://github.com/obsidian-community/obsidian-style-settings) plugin installed, open **Settings** > **Style Settings** > **Rain-Washed Sky**:
+
+- **Color palette:** Switch between **Rain-Washed Sky** (雨過天青, default), **Nordic Espresso** (北歐咖啡), **Imperial Forest** (帝王森林), **Jade & Agarwood** (翡翠沉香), and **Ink & Cinnabar** (水墨朱砂). Each palette includes both a light and a dark variant, which follow Obsidian's base color scheme.
+- **Color overrides:** Fine-tune the main accent, H1–H3, bold text, links, and tag colors on top of the selected palette (separately for light and dark mode). Reset an override to fall back to the palette's color.
+
+Without Style Settings, the theme uses the default Rain-Washed Sky palette.
+
+---
+
 ## 🏗️ Installation
 
 1.  Open Obsidian **Settings** > **Appearance** > **Themes**.
