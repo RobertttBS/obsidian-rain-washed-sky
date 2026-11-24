@@ -57,8 +57,8 @@ Each palette is built from two colors, A and B. Dark mode swaps their roles.
 
 Examples already in the theme:
 
-- Rain-Washed Sky: light uses a Ru-ware celadon base (`#F2F7F7`) with blue-and-white accents (`#346c9c`). Dark uses a deep blue base (`#0F1626`) with celadon accents (`#7CC5C5`).
-- Peach Blossom: light uses a pink base (`#FDF5F7`) with a navy accent (`#2B4C7E`). Dark uses a navy base (`#0E1A2B`) with a pink accent (`#EFA3BA`).
+- Rain-Washed Sky: light uses a Ru-ware celadon base (`#F6F7F2`, leaning ivory) with blue-and-white accents (`#346c9c`). Dark uses a deep blue base (`#0F1626`) with celadon accents (`#7CC5C5`).
+- Peach Blossom: light uses a pink base (`#FDF7F3`, leaning ivory) with a navy accent (`#2B4C7E`). Dark uses a navy base (`#0E1A2B`) with a pink accent (`#EFA3BA`).
 
 Do not swap these. Keep the same hue in both modes and change only the lightness:
 
