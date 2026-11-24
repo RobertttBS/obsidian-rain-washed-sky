@@ -2275,6 +2275,18 @@ Workspace Decoration
   border-bottom-style: none;
 }
 
+/* 側欄 divider 推過 0.6rem 間隙，貼齊筆記卡片左右緣 */
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle {
+  inset-inline-end: -0.6rem;
+}
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+  inset-inline-start: -0.6rem;
+}
+/* 平時邊框（--divider-color 即背景色）會壓到卡片陰影成細線，只在 hover 顯示 */
+.workspace-split:is(.mod-left-split, .mod-right-split) > .workspace-leaf-resize-handle:not(:hover) {
+  border-color: transparent;
+}
+
 /* Adjust tab header */
 .mod-root .workspace-tab-header-container-inner {
   margin-top: 6px; /* tab 上緣對齊右側欄啟用圖示的凹槽上緣（6px + padding-top 1px = 7px） */
