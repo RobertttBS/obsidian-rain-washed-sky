@@ -2295,11 +2295,14 @@ Workspace Decoration
 }
 
 /* 第一個 tab 啟用時：筆記區左上角改直角、隱藏左側反向圓角，避免尖端
-   左側欄收合時（mod-top-left-space），tab 被側欄按鈕往右推、不貼左緣，保留圓角與反向圓角 */
-.mod-root .workspace-tabs:not(.mod-stacked):not(.mod-top-left-space):has(.workspace-tab-header:first-child.is-active) > .workspace-tab-container {
+   macOS 左側欄收合時（mod-top-left-space），tab 被紅綠燈與側欄按鈕往右推、不貼左緣，保留圓角與反向圓角
+   Windows / Linux 沒有這個位移，tab 仍貼左緣，維持直角 */
+body:not(.mod-macos) .mod-root .workspace-tabs:not(.mod-stacked):has(.workspace-tab-header:first-child.is-active) > .workspace-tab-container,
+body.mod-macos .mod-root .workspace-tabs:not(.mod-stacked):not(.mod-top-left-space):has(.workspace-tab-header:first-child.is-active) > .workspace-tab-container {
   border-top-left-radius: 0;
 }
-.workspace-split.mod-root .workspace-tabs:not(.mod-top-left-space) .workspace-tab-header-container .workspace-tab-header.is-active:first-child::before {
+body:not(.mod-macos) .workspace-split.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header.is-active:first-child::before,
+body.mod-macos .workspace-split.mod-root .workspace-tabs:not(.mod-top-left-space) .workspace-tab-header-container .workspace-tab-header.is-active:first-child::before {
   display: none;
 }
 
