@@ -2295,6 +2295,15 @@ Workspace Decoration
     var(--float-shadow-2);
 }
 
+/* 水墨朱砂深色的層次差較大，擴散影在編輯區左側暈成一片，改用較窄的擴散影 */
+.theme-dark.rws-palette-ink-cinnabar .mod-root .workspace-tabs .workspace-tab-container {
+  box-shadow:
+    var(--float-highlight),
+    var(--float-lowlight),
+    var(--float-shadow-1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.58);
+}
+
 /* resize handle when split tab */
 .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle {
   border-inline-end-style: none;
