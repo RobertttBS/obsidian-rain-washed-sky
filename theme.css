@@ -418,13 +418,13 @@ settings:
 
 .theme-dark.rws-palette-nordic-espresso {
   /* === 基底：濃萃深焙為海，北歐霧藍為星 === */
-  --user-bg-white:        #140F0C;
-  --user-bg-pink-pale:    #1A1411;
-  --user-bg-pink-soft:    #1E1814;
-  --user-bg-pink-deep:    #27201D;
-  --user-bg-blockquote:   #1B1512;
-  --user-active-line:     #191310;
-  --user-canvas-bg:       #100B09;
+  --user-bg-white: #0F0B08;
+  --user-bg-pink-pale: #1B140F;
+  --user-bg-pink-soft: #221914;
+  --user-bg-pink-deep: #342922;
+  --user-bg-blockquote: #1D1511;
+  --user-active-line: #19120E;
+  --user-canvas-bg: #070504;
   --user-canvas-node:     #1A1411;
 
   /* === 文字 (燕麥暖灰內文與微暖奶泡粗體，消除高反差眩光) === */
@@ -592,13 +592,13 @@ settings:
 
 .theme-dark.rws-palette-imperial-forest {
   /* === 基底：幽林蒼松為海，古銅香檳為星 === */
-  --user-bg-white:        #0C120E;
-  --user-bg-pink-pale:    #111713;
-  --user-bg-pink-soft:    #141B16;
-  --user-bg-pink-deep:    #1D241F;
-  --user-bg-blockquote:   #121814;
-  --user-active-line:     #101612;
-  --user-canvas-bg:       #080E0A;
+  --user-bg-white: #0A100C;
+  --user-bg-pink-pale: #111A14;
+  --user-bg-pink-soft: #16211A;
+  --user-bg-pink-deep: #253229;
+  --user-bg-blockquote: #131C16;
+  --user-active-line: #101812;
+  --user-canvas-bg: #040805;
   --user-canvas-node:     #111713;
 
   /* === 文字 (微冷松灰白與亞麻羊皮紙粗體，消除螢光綠與亮金對撞) === */
@@ -766,13 +766,13 @@ settings:
 
 .theme-dark.rws-palette-jade-agarwood {
   /* === 基底：老坑墨翠為海，沉香暖玉為星 === */
-  --user-bg-white:        #0A1210;
-  --user-bg-pink-pale:    #0E1815;
-  --user-bg-pink-soft:    #121C19;
-  --user-bg-pink-deep:    #1A2522;
-  --user-bg-blockquote:   #0F1916;
-  --user-active-line:     #0D1614;
-  --user-canvas-bg:       #070E0C;
+  --user-bg-white: #060C0A;
+  --user-bg-pink-pale: #0C1513;
+  --user-bg-pink-soft: #111B19;
+  --user-bg-pink-deep: #1D2926;
+  --user-bg-blockquote: #0D1614;
+  --user-active-line: #0A1210;
+  --user-canvas-bg: #020504;
   --user-canvas-node:     #0E1815;
 
   /* === 文字 (香灰暖白內文與溫潤羊脂粗體) === */
@@ -939,13 +939,13 @@ settings:
 
 .theme-dark.rws-palette-ink-cinnabar {
   /* === 基底：松煙玄墨為海，一點礦物朱砂為星 === */
-  --user-bg-white:        #101014;
-  --user-bg-pink-pale:    #151519;
-  --user-bg-pink-soft:    #18191D;
-  --user-bg-pink-deep:    #212227;
-  --user-bg-blockquote:   #16161A;
-  --user-active-line:     #141418;
-  --user-canvas-bg:       #0C0C0F;
+  --user-bg-white: #0D0D11;
+  --user-bg-pink-pale: #17171C;
+  --user-bg-pink-soft: #1D1D24;
+  --user-bg-pink-deep: #2E2E39;
+  --user-bg-blockquote: #19191E;
+  --user-active-line: #15151A;
+  --user-canvas-bg: #050507;
   --user-canvas-node:     #151519;
 
   /* === 文字 (宣紙銀墨灰階，控制於 10.9:1 舒適對比度) === */
