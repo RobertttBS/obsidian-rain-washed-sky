@@ -417,89 +417,89 @@ settings:
 }
 
 .theme-dark.rws-palette-nordic-espresso {
-  /* === 基底：濃萃咖啡為海，北歐霧藍為星 === */
-  --user-bg-white:        #1C1917;
-  --user-bg-pink-pale:    #25211E;
-  --user-bg-pink-soft:    #2E2925;
-  --user-bg-pink-deep:    #3B3530;
-  --user-bg-blockquote:   #25211E;
-  --user-active-line:     #26221F;
-  --user-canvas-bg:       #181513;
-  --user-canvas-node:     #25211E;
+  /* === 基底：濃萃深焙為海，北歐霧藍為星 === */
+  --user-bg-white:        #140F0C;
+  --user-bg-pink-pale:    #1A1411;
+  --user-bg-pink-soft:    #1E1814;
+  --user-bg-pink-deep:    #27201D;
+  --user-bg-blockquote:   #1B1512;
+  --user-active-line:     #191310;
+  --user-canvas-bg:       #100B09;
+  --user-canvas-node:     #1A1411;
 
-  /* === 文字 (燕麥奶泡暖白與拿鐵金米粗體) === */
-  --user-text-main:       #EAE6E1;
-  --user-text-muted:      #A8A098;
-  --user-text-faint:      #787068;
-  --user-text-bold:       #F3DEC2;
+  /* === 文字 (燕麥暖灰內文與微暖奶泡粗體，消除高反差眩光) === */
+  --user-text-main:       #D3CEC8;
+  --user-text-muted:      #9A928E;
+  --user-text-faint:      #67605D;
+  --user-text-bold:       #EAE4DC;
 
-  /* === 標題漸層 (北歐冰川霧藍) === */
-  --h1-gradient:          #92B9DC;
-  --h2-gradient:          #7BA6CC;
-  --h3-gradient:          #6492BA;
+  /* === 標題漸層 (低彩冰川霧藍，以字重與微冷調分層) === */
+  --h1-gradient:          #DCE6EE;
+  --h2-gradient:          #BDCDDC;
+  --h3-gradient:          #9CB3C7;
 
-  /* === 強調與連結 (霧藍主軸 + 赤陶橘紅點綴呼應) === */
-  --user-accent-main:     #6898C2;
-  --user-accent-strong:   #D9725B; /* 赤陶橘紅 (與淺色同色相提亮) */
-  --user-accent-highlight:rgba(217, 155, 102, 0.22);
+  /* === 強調與連結 (單一霧藍主軸 + 低彩赤陶微光) === */
+  --user-accent-main:     #7CA2C4;
+  --user-accent-strong:   #C47B68; /* 低彩赤陶紅 (與淺色同色相柔化) */
+  --user-accent-highlight:rgba(196, 123, 104, 0.20);
 
-  --user-link-internal:   #7EB2DD;
-  --user-link-external:   #9CC2E6;
-  --link-unresolved-color: #787068;
+  --user-link-internal:   #82A8CA;
+  --user-link-external:   #96B2CA;
+  --link-unresolved-color: #6E7C88;
 
   /* === 介面 === */
-  --user-border-light:    #4A423B;
-  --user-selection:       rgba(104, 152, 194, 0.30);
-  --user-canvas-selection:#6898C2;
+  --user-border-light:    rgba(255, 242, 232, 0.075);
+  --user-selection:       rgba(124, 162, 196, 0.24);
+  --user-canvas-selection:#7CA2C4;
 
   /* === Callout === */
-  --user-accent-tip:      #4A6D7C;
-  --user-accent-success:  #4A6856;
-  --user-accent-warning:  #8C7A3E;
-  --user-accent-info:     #3C5A76;
-  --user-accent-error:    #8E525E;
-  --user-accent-quote:    #44403C;
-  --user-accent-example:  #5C527F;
-  --user-accent-background: #25211E;
-  --user-callout-title:   #EAE6E1;
+  --user-accent-tip:      #5E8898;
+  --user-accent-success:  #5E826C;
+  --user-accent-warning:  #A6904E;
+  --user-accent-info:     #547899;
+  --user-accent-error:    #A86472;
+  --user-accent-quote:    #787068;
+  --user-accent-example:  #786CA3;
+  --user-accent-background: #1B1512;
+  --user-callout-title:   #EAE4DC;
 
-  --user-theme-pop:       #E08B72;
+  --user-theme-pop:       #7C7470;
 
   /* Flat/Glassmorphism for Dark Mode */
-  --float-highlight: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  --float-highlight: inset 0 1px 0 0 rgba(255, 255, 255, 0.06);
   --float-lowlight: none;
-  --float-shadow-1: 0 2px 4px rgba(0, 0, 0, 0.3);
-  --float-shadow-2: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --float-shadow-1: 0 2px 4px rgba(0, 0, 0, 0.32);
+  --float-shadow-2: 0 6px 14px rgba(0, 0, 0, 0.48);
 
-  --canvas-float-highlight: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  --canvas-float-highlight: inset 0 1px 0 0 rgba(255, 255, 255, 0.06);
   --canvas-float-lowlight: none;
-  --canvas-float-shadow-1: 0 2px 4px rgba(0, 0, 0, 0.3); 
-  --canvas-float-shadow-2: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --canvas-float-shadow-1: 0 2px 4px rgba(0, 0, 0, 0.32);
+  --canvas-float-shadow-2: 0 6px 14px rgba(0, 0, 0, 0.48);
 
-  /* HSL：Dusty Fjord Blue (#6898C2) */
+  /* HSL：Dusty Fjord Blue (#7CA2C4) */
   --accent-h: 208;
-  --accent-s: 43%;
-  --accent-l: 58%; 
+  --accent-s: 38%;
+  --accent-l: 60%;
 
   --interactive-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-  --interactive-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 8%));
+  --interactive-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 7%));
 
-  --user-inline-code-bg: #2B2623;
-  --user-inline-code-text: #E3927B;
+  --user-inline-code-bg: rgba(255, 248, 240, 0.055);
+  --user-inline-code-text: #C99B8E;
 
-  /* Tag 樣式：赤陶暖橘光暈，與霧藍標題交相呼應 */
-  --user-tag-color:            #E8A48E;
-  --user-tag-color-hover:      #F5BFA8;
-  --user-tag-background:       rgba(217, 114, 91, 0.16);
-  --user-tag-background-hover: rgba(217, 114, 91, 0.26);
+  /* Tag 樣式：內斂赤陶微光 */
+  --user-tag-color:            #CFA293;
+  --user-tag-color-hover:      #DFB8AB;
+  --user-tag-background:       rgba(196, 123, 104, 0.12);
+  --user-tag-background-hover: rgba(196, 123, 104, 0.20);
 
   /* === Canvas Node Decoration === */
-  --canvas-red: 235, 105, 95;
-  --canvas-orange: 235, 145, 90;
-  --canvas-yellow: 240, 210, 115;
-  --canvas-green: 110, 185, 145;
-  --canvas-blue: 105, 170, 230;
-  --canvas-purple: 175, 150, 230;
+  --canvas-red: 215, 110, 100;
+  --canvas-orange: 215, 145, 98;
+  --canvas-yellow: 220, 195, 120;
+  --canvas-green: 115, 170, 138;
+  --canvas-blue: 115, 165, 210;
+  --canvas-purple: 165, 145, 210;
 }
 
 /* --- Palette: Imperial Forest --- */
@@ -591,88 +591,88 @@ settings:
 }
 
 .theme-dark.rws-palette-imperial-forest {
-  /* === 基底：幽林墨綠為海，帝王鎏金為星 === */
-  --user-bg-white:        #0B120E;
-  --user-bg-pink-pale:    #131E17;
-  --user-bg-pink-soft:    #18261E;
-  --user-bg-pink-deep:    #22352A;
-  --user-bg-blockquote:   rgba(34, 53, 42, 0.55);
-  --user-active-line:     #1B2C22;
-  --user-canvas-bg:       #080D0A;
-  --user-canvas-node:     rgba(26, 40, 32, 0.78);
+  /* === 基底：幽林蒼松為海，古銅香檳為星 === */
+  --user-bg-white:        #0C120E;
+  --user-bg-pink-pale:    #111713;
+  --user-bg-pink-soft:    #141B16;
+  --user-bg-pink-deep:    #1D241F;
+  --user-bg-blockquote:   #121814;
+  --user-active-line:     #101612;
+  --user-canvas-bg:       #080E0A;
+  --user-canvas-node:     #111713;
 
-  /* === 文字 === */
-  --user-text-main:       #DCE5DC;
-  --user-text-muted:      #9AB89E;
-  --user-text-faint:      #5B7360;
-  --user-text-bold:       #DFB858; /* 琥珀鎏金 */
+  /* === 文字 (微冷松灰白與亞麻羊皮紙粗體，消除螢光綠與亮金對撞) === */
+  --user-text-main:       #CED5CF;
+  --user-text-muted:      #8E9690;
+  --user-text-faint:      #5D645F;
+  --user-text-bold:       #EAE6DC;
 
-  /* === 標題漸層 (蒼翠松煙) === */
-  --h1-gradient:          #A8D5BA;
-  --h2-gradient:          #86BE9D;
-  --h3-gradient:          #6A9E80;
+  /* === 標題漸層 (低彩霧松銀青) === */
+  --h1-gradient:          #E2ECE5;
+  --h2-gradient:          #C2D4C8;
+  --h3-gradient:          #A0B8A8;
 
-  /* === 強調與連結 (帝王鎏金呼應鏈，消除螢光綠筆誤) === */
-  --user-accent-main:      #D4AF37;
-  --user-accent-strong:    #E5BE5C;
-  --user-accent-highlight: #263D2F;
+  /* === 強調與連結 (內斂古銅香檳主軸，統一連結色系) === */
+  --user-accent-main:      #C2A66B;
+  --user-accent-strong:    #C8A25C;
+  --user-accent-highlight: rgba(194, 166, 107, 0.18);
 
-  --user-link-internal:    #7ED49E; /* 溫潤碧玉綠，取代刺眼純螢光綠 */
-  --user-link-external:    #DFB858;
-  --link-unresolved-color: #B89848;
+  --user-link-internal:    #C7AE76;
+  --user-link-external:    #9AB5A3;
+  --link-unresolved-color: #7D7663;
 
   /* === 介面 === */
-  --user-border-light:     #35483A;
-  --user-selection:        rgba(212, 175, 55, 0.25);
-  --user-canvas-selection: #D4AF37;
+  --user-border-light:     rgba(220, 242, 226, 0.075);
+  --user-selection:        rgba(194, 166, 107, 0.22);
+  --user-canvas-selection: #C2A66B;
 
   /* === Callout (Deep Nature Harmony) === */
-  --user-accent-tip:       #40E0D0;
-  --user-accent-success:   #2E8B57;
-  --user-accent-warning:   #DAA520;
-  --user-accent-info:      #4682B4;
-  --user-accent-error:     #B84238;
-  --user-accent-quote:     #A9A9A9;
-  --user-accent-example:   #9ACD32;
-  --user-accent-background: #1A261F;
-  --user-callout-title:    #FFFFFF;
+  --user-accent-tip:       #6CA89A;
+  --user-accent-success:   #5E9468;
+  --user-accent-warning:   #C4A055;
+  --user-accent-info:      #688CA0;
+  --user-accent-error:     #B56558;
+  --user-accent-quote:     #8C968E;
+  --user-accent-example:   #86A658;
+  --user-accent-background: #121814;
+  --user-callout-title:    #EAE6DC;
 
-  --user-theme-pop:        #DFB858;
+  --user-theme-pop:        #717873;
 
-  --float-highlight: inset 0.6px 1px 0 0 rgba(255, 255, 255, 0.1);
-  --float-lowlight: inset -0.6px -1px 0 0 rgba(0, 0, 0, 0.4);
-  --float-shadow-1: 0 4px 6px rgba(0, 0, 0, 0.6);
-  --float-shadow-2: 0 12px 24px -6px rgba(0, 0, 0, 0.8);
+  --float-highlight: inset 0 1px 0 0 rgba(255, 255, 255, 0.07);
+  --float-lowlight: inset 0 -1px 0 0 rgba(0, 0, 0, 0.38);
+  --float-shadow-1: 0 2px 4px rgba(0, 0, 0, 0.45);
+  --float-shadow-2: 0 8px 18px -4px rgba(0, 0, 0, 0.6);
 
-  --canvas-float-highlight: inset 1px 2px 0 0 rgba(255, 255, 255, 0.08);
-  --canvas-float-lowlight: inset -1px -2px 0 0 rgba(0, 0, 0, 0.5);
-  --canvas-float-shadow-1: 0 2px 5px rgba(0, 0, 0, 0.5); 
-  --canvas-float-shadow-2: 0 10px 20px -5px rgba(0, 0, 0, 0.7);
+  --canvas-float-highlight: inset 0 1px 0 0 rgba(255, 255, 255, 0.07);
+  --canvas-float-lowlight: inset 0 -1px 0 0 rgba(0, 0, 0, 0.45);
+  --canvas-float-shadow-1: 0 2px 5px rgba(0, 0, 0, 0.45);
+  --canvas-float-shadow-2: 0 8px 18px -4px rgba(0, 0, 0, 0.6);
 
-  /* HSL：Imperial Gold (#D4AF37) */
-  --accent-h: 45;
-  --accent-s: 65%;
-  --accent-l: 48%;
+  /* HSL：Antique Champagne Bronze (#C2A66B) */
+  --accent-h: 41;
+  --accent-s: 38%;
+  --accent-l: 54%;
 
   --interactive-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-  --interactive-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 8%));
+  --interactive-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 7%));
 
-  --user-inline-code-bg: #1F3127;
-  --user-inline-code-text: #E6BF63;
+  --user-inline-code-bg: rgba(235, 245, 238, 0.055);
+  --user-inline-code-text: #C9B58A;
 
-  /* Tags: 溫潤琥珀赤金 */
-  --user-tag-color:            #E8C468;
-  --user-tag-color-hover:      #F5DA8A;
-  --user-tag-background:       rgba(212, 175, 55, 0.16);
-  --user-tag-background-hover: rgba(212, 175, 55, 0.28);
+  /* Tags: 內斂香檳古銅微光 */
+  --user-tag-color:            #CCB480;
+  --user-tag-color-hover:      #DEC898;
+  --user-tag-background:       rgba(194, 166, 107, 0.12);
+  --user-tag-background-hover: rgba(194, 166, 107, 0.20);
 
   /* === Canvas Node Decoration === */
-  --canvas-red: 255, 90, 90;
-  --canvas-orange: 255, 103, 0;
-  --canvas-yellow: 255, 230, 100;
-  --canvas-green: 100, 200, 150;
-  --canvas-blue: 80, 180, 255;
-  --canvas-purple: 180, 150, 255;
+  --canvas-red: 215, 105, 100;
+  --canvas-orange: 215, 145, 90;
+  --canvas-yellow: 220, 195, 115;
+  --canvas-green: 110, 175, 138;
+  --canvas-blue: 105, 165, 210;
+  --canvas-purple: 165, 145, 210;
 }
 
 /* --- Palette: Jade & Agarwood --- */
@@ -765,89 +765,88 @@ settings:
 }
 
 .theme-dark.rws-palette-jade-agarwood {
-  /* === 基底：沉香烏木為海，冰種翡翠為星 === */
-  --user-bg-white:        #141210;
-  --user-bg-pink-pale:    #1B1815;
-  --user-bg-pink-soft:    #211D1A;
-  --user-bg-pink-deep:    #2B2521;
-  --user-bg-blockquote:   #231E1B;
-  --user-active-line:     #1E1A17;
-  --user-canvas-bg:       #12100E;
-  --user-canvas-node:     #1C1815;
+  /* === 基底：老坑墨翠為海，沉香暖玉為星 === */
+  --user-bg-white:        #0A1210;
+  --user-bg-pink-pale:    #0E1815;
+  --user-bg-pink-soft:    #121C19;
+  --user-bg-pink-deep:    #1A2522;
+  --user-bg-blockquote:   #0F1916;
+  --user-active-line:     #0D1614;
+  --user-canvas-bg:       #070E0C;
+  --user-canvas-node:     #0E1815;
 
-  /* === 文字 === */
-  --user-text-main:       #ECEAE4;
-  --user-text-muted:      #B8B2A8;
-  --user-text-faint:      #756E66;
-  --user-text-bold:       #E8CFA6; /* 沉香暖金 */
+  /* === 文字 (香灰暖白內文與溫潤羊脂粗體) === */
+  --user-text-main:       #D0D6D4;
+  --user-text-muted:      #8C9693;
+  --user-text-faint:      #5B6461;
+  --user-text-bold:       #ECE6DC;
 
-  /* === 標題漸層 (冰種陽綠翡翠) === */
-  --h1-gradient:          #6AD4BE;
-  --h2-gradient:          #55BFA9;
-  --h3-gradient:          #43A893;
+  /* === 標題漸層 (低彩冰種晴水玉) === */
+  --h1-gradient:          #EFE7DC;
+  --h2-gradient:          #D8C9B8;
+  --h3-gradient:          #BEA992;
 
-  /* === 強調與連結 (翡翠主軸 + 沉香暖紅點綴呼應) === */
-  --user-accent-main:     #55BFA9;
-  --user-accent-strong:   #DE7456;
-  --user-accent-highlight:#362C24;
+  /* === 強調與連結 (晴水翡翠單一主軸 + 沉香暖棕微光) === */
+  --user-accent-main:     #6FB3A3;
+  --user-accent-strong:   #C47D64;
+  --user-accent-highlight:rgba(196, 125, 100, 0.18);
 
-  --user-link-internal:   #78D6B2;
-  --user-link-external:   #78B4D6;
-  --link-unresolved-color: #65A892;
+  --user-link-internal:   #77B8A8;
+  --user-link-external:   #C9AD8E;
+  --link-unresolved-color: #688C83;
 
   /* === 介面 === */
-  --user-border-light:    #3D352E;
-  --user-selection:       rgba(222, 116, 86, 0.25);
-  --user-canvas-selection:#DE7456;
+  --user-border-light:    rgba(220, 245, 238, 0.075);
+  --user-selection:       rgba(111, 179, 163, 0.22);
+  --user-canvas-selection:#6FB3A3;
 
   /* === Callout === */
-  --user-accent-tip:      #4EE8D2;
-  --user-accent-success:  #7EB96A;
-  --user-accent-warning:  #E8B76B;
-  --user-accent-info:     #4A9BC4;
-  --user-accent-error:    #FF6B5C;
-  --user-accent-quote:    #B8B2A8;
-  --user-accent-example:  #9B7ED9;
-  --user-accent-background: #B36EC9;
-  --user-callout-title:   #ECEAE4;
+  --user-accent-tip:      #63B8A8;
+  --user-accent-success:  #76A868;
+  --user-accent-warning:  #CCA366;
+  --user-accent-info:     #6294B5;
+  --user-accent-error:    #C96B60;
+  --user-accent-quote:    #969189;
+  --user-accent-example:  #927EC2;
+  --user-accent-background: #A372B5;
+  --user-callout-title:   #ECE7DF;
 
-  --user-theme-pop:       #E59874;
+  --user-theme-pop:       #6E7975;
 
-  --float-highlight: inset 0.6px 1px 0 0 rgba(255, 245, 235, 0.12);
-  --float-lowlight: inset -0.6px -1px 0 0 rgba(0, 0, 0, 0.45);
-  --float-shadow-1: 0 2px 3px rgba(0, 0, 0, 0.55);
-  --float-shadow-2: 0 6px 12px -3px rgba(0, 0, 0, 0.65);
+  --float-highlight: inset 0 1px 0 0 rgba(255, 245, 235, 0.07);
+  --float-lowlight: inset 0 -1px 0 0 rgba(0, 0, 0, 0.42);
+  --float-shadow-1: 0 2px 3px rgba(0, 0, 0, 0.48);
+  --float-shadow-2: 0 6px 12px -3px rgba(0, 0, 0, 0.58);
 
-  --canvas-float-highlight: inset 1px 2px 0 0 rgba(255, 245, 235, 0.12);
-  --canvas-float-lowlight: inset -1px -2px 0 0 rgba(0, 0, 0, 0.45);
-  --canvas-float-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.35); 
+  --canvas-float-highlight: inset 0 1px 0 0 rgba(255, 245, 235, 0.07);
+  --canvas-float-lowlight: inset 0 -1px 0 0 rgba(0, 0, 0, 0.42);
+  --canvas-float-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.35);
   --canvas-float-shadow-2: 0 4px 8px -2px rgba(0, 0, 0, 0.45);
 
-  /* HSL：翡翠綠主調 (#48B59F) */
-  --accent-h: 168;
-  --accent-s: 46%;
-  --accent-l: 48%; 
+  /* HSL：Celadon Jade (#6FB3A3) */
+  --accent-h: 166;
+  --accent-s: 32%;
+  --accent-l: 52%;
 
-  /* 重新宣告 */
   --interactive-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
   --interactive-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 7%));
 
-  --user-inline-code-bg: #29231F;
-  --user-inline-code-text: #EE9B7A;
+  --user-inline-code-bg: rgba(255, 248, 240, 0.055);
+  --user-inline-code-text: #CCA28E;
 
-  /* 標籤：沉香琥珀暖光 */
-  --user-tag-color:           #F0BA7A;
-  --user-tag-color-hover:     #FAD09E;
-  --user-tag-background:      rgba(222, 116, 86, 0.16);
-  --user-tag-background-hover: rgba(222, 116, 86, 0.26);
+  /* 標籤：內斂沉香暖琥珀微光 */
+  --user-tag-color:           #CEA688;
+  --user-tag-color-hover:     #DFBC9F;
+  --user-tag-background:      rgba(196, 125, 100, 0.12);
+  --user-tag-background-hover:rgba(196, 125, 100, 0.20);
 
   /* === Canvas Node Decoration === */
-  --canvas-red: 255, 90, 90;
-  --canvas-orange: 255, 103, 0;
-  --canvas-yellow: 255, 230, 100;
-  --canvas-green: 100, 200, 150;
-  --canvas-blue: 80, 180, 255;
-  --canvas-purple: 180, 150, 255;
+  --canvas-red: 215, 105, 100;
+  --canvas-orange: 215, 145, 90;
+  --canvas-yellow: 220, 195, 115;
+  --canvas-green: 110, 175, 145;
+  --canvas-blue: 105, 165, 210;
+  --canvas-purple: 165, 145, 210;
 }
 
 /* --- Palette: Ink & Cinnabar --- */
@@ -939,88 +938,88 @@ settings:
 }
 
 .theme-dark.rws-palette-ink-cinnabar {
-  /* === 基底：松煙濃墨為海，丹砂印泥為星 === */
-  --user-bg-white:        #121214;
-  --user-bg-pink-pale:    #17171A;
-  --user-bg-pink-soft:    #1C1C20;
-  --user-bg-pink-deep:    #25252A;
-  --user-bg-blockquote:   #1A1A1E;
-  --user-active-line:     #19191D;
-  --user-canvas-bg:       #101012;
-  --user-canvas-node:     #18181C;
+  /* === 基底：松煙玄墨為海，一點礦物朱砂為星 === */
+  --user-bg-white:        #101014;
+  --user-bg-pink-pale:    #151519;
+  --user-bg-pink-soft:    #18191D;
+  --user-bg-pink-deep:    #212227;
+  --user-bg-blockquote:   #16161A;
+  --user-active-line:     #141418;
+  --user-canvas-bg:       #0C0C0F;
+  --user-canvas-node:     #151519;
 
-  /* === 文字 (宣紙銀白灰階，消除 21:1 刺眼眩光) === */
-  --user-text-main:        #DFDDD8;
-  --user-text-muted:       #9E9B95;
-  --user-text-faint:       #66645F;
-  --user-text-bold:        #F5F2EB; 
+  /* === 文字 (宣紙銀墨灰階，控制於 10.9:1 舒適對比度) === */
+  --user-text-main:        #D2D0CA;
+  --user-text-muted:       #939398;
+  --user-text-faint:       #616166;
+  --user-text-bold:        #ECEAE4;
 
-  /* === 標題漸層 === */
-  --h1-gradient:           #F5F2EB;
+  /* === 標題漸層 (五色水墨濃淡) === */
+  --h1-gradient:           #EFECE6;
   --h2-gradient:           #D4D1CA;
-  --h3-gradient:           #B3B0A9;
+  --h3-gradient:           #B5B2AB;
 
-  /* === 強調與連結 (純粹墨灰與明亮朱砂呼應鏈) === */
-  --user-accent-main:      #8E8B85;
-  --user-accent-strong:    #E04F48; /* 丹砂紅 (深色清晰點綴) */
-  --user-accent-highlight: #3A2324;
+  /* === 強調與連結 (純粹銀墨與低彩礦物丹砂呼應) === */
+  --user-accent-main:      #9E9A93;
+  --user-accent-strong:    #CF6A63; /* 礦物丹砂紅 */
+  --user-accent-highlight: rgba(207, 106, 99, 0.18);
 
-  --user-link-internal:    #EE7A74; /* 淺朱砂內鏈 */
-  --user-link-external:    #B8B4AC; /* 銀墨外鏈 */
-  --link-unresolved-color: #9E6865;
+  --user-link-internal:    #D68680; /* 溫潤丹砂內鏈 */
+  --user-link-external:    #AEAAA2; /* 銀墨外鏈 */
+  --link-unresolved-color: #966D6A;
 
   /* === 介面 === */
-  --user-border-light:     #2E2E34;
-  --user-selection:        rgba(224, 79, 72, 0.24);
-  --user-canvas-selection: #E04F48;
+  --user-border-light:     rgba(235, 236, 250, 0.075);
+  --user-selection:        rgba(207, 106, 99, 0.22);
+  --user-canvas-selection: #CF6A63;
 
   /* === Callout 專用色系 === */
-  --user-accent-tip:       #55e9cc;
-  --user-accent-success:   #538731;
-  --user-accent-warning:   rgb(255, 149, 20);
-  --user-accent-info:      #4A82B0;
-  --user-accent-error:     #E04F48;
-  --user-accent-quote:     #9E9B95;
-  --user-accent-example:   #9370DB;
-  --user-accent-background: #AF7AC5;
-  --user-callout-title:    #F5F2EB;
+  --user-accent-tip:       #6DB8AB;
+  --user-accent-success:   #82AD65;
+  --user-accent-warning:   #CCA05E;
+  --user-accent-info:      #749BBF;
+  --user-accent-error:     #CF6A63;
+  --user-accent-quote:     #94918B;
+  --user-accent-example:   #9E8CC7;
+  --user-accent-background: #AD89BA;
+  --user-callout-title:    #ECEAE4;
 
-  --user-theme-pop:        #E04F48;
+  --user-theme-pop:        #75757A;
 
-  --float-highlight: inset 0.6px 1px 0 0 rgba(255, 255, 255, 0.07);
-  --float-lowlight: inset -0.6px -1px 0 0 rgba(0, 0, 0, 0.5);
-  --float-shadow-1: 0 4px 6px rgba(0, 0, 0, 0.7);
-  --float-shadow-2: 0 10px 20px rgba(0, 0, 0, 0.8);
+  --float-highlight: inset 0 1px 0 0 rgba(255, 255, 255, 0.06);
+  --float-lowlight: inset 0 -1px 0 0 rgba(0, 0, 0, 0.45);
+  --float-shadow-1: 0 2px 3px rgba(0, 0, 0, 0.48);
+  --float-shadow-2: 0 6px 12px -3px rgba(0, 0, 0, 0.58);
 
-  --canvas-float-highlight: inset 1px 2px 0 0 rgba(255, 255, 255, 0.08);
-  --canvas-float-lowlight: inset -1px -2px 0 0 rgba(0, 0, 0, 0.6);
-  --canvas-float-shadow-1: 0 2px 4px rgba(0, 0, 0, 0.65); 
-  --canvas-float-shadow-2: 0 8px 16px rgba(0, 0, 0, 0.75);
+  --canvas-float-highlight: inset 0 1px 0 0 rgba(255, 255, 255, 0.07);
+  --canvas-float-lowlight: inset 0 -1px 0 0 rgba(0, 0, 0, 0.5);
+  --canvas-float-shadow-1: 0 2px 4px rgba(0, 0, 0, 0.5);
+  --canvas-float-shadow-2: 0 8px 16px rgba(0, 0, 0, 0.6);
 
-  /* HSL：Cinnabar Red (#E04F48) */
-  --accent-h: 3;
-  --accent-s: 71%;
-  --accent-l: 58%; 
+  /* HSL：Mineral Cinnabar (#CF6A63) */
+  --accent-h: 4;
+  --accent-s: 52%;
+  --accent-l: 57%;
 
   --interactive-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
   --interactive-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 7%));
 
-  --user-inline-code-bg: #242226;
-  --user-inline-code-text: #F08A84;
+  --user-inline-code-bg: rgba(255, 255, 255, 0.055);
+  --user-inline-code-text: #D99690;
 
-  /* 標籤：丹砂微光，與側欄、箭頭、內鏈完整呼應 */
-  --user-tag-color:            #F2857E;
-  --user-tag-color-hover:      #FFA59E;
-  --user-tag-background:       rgba(224, 79, 72, 0.16);
-  --user-tag-background-hover: rgba(224, 79, 72, 0.26);
+  /* 標籤：溫潤印泥微光 */
+  --user-tag-color:            #D8908A;
+  --user-tag-color-hover:      #E6A8A3;
+  --user-tag-background:       rgba(207, 106, 99, 0.12);
+  --user-tag-background-hover: rgba(207, 106, 99, 0.20);
 
   /* === Canvas Node Decoration === */
-  --canvas-red: 235, 85, 80;
-  --canvas-orange: 235, 145, 85;
-  --canvas-yellow: 235, 205, 110;
-  --canvas-green: 110, 180, 140;
-  --canvas-blue: 105, 165, 225;
-  --canvas-purple: 170, 145, 220;
+  --canvas-red: 215, 95, 90;
+  --canvas-orange: 215, 145, 90;
+  --canvas-yellow: 220, 195, 115;
+  --canvas-green: 110, 175, 140;
+  --canvas-blue: 105, 160, 210;
+  --canvas-purple: 165, 145, 210;
 }
 
 /* --- Palette: Peach Blossom --- */
@@ -1112,88 +1111,88 @@ settings:
 }
 
 .theme-dark.rws-palette-peach-blossom {
-  /* === 基底：深海夜色為體，櫻粉花蕊為星 === */
-  --user-bg-white:        #0E1A2B;
-  --user-bg-pink-pale:    #13223A;
-  --user-bg-pink-soft:    #172842;
-  --user-bg-pink-deep:    #213656;
-  --user-bg-blockquote:   #1A2C47;
-  --user-active-line:     #15253C;
-  --user-canvas-bg:       #0C1726;
-  --user-canvas-node:     #14213A;
+  /* === 基底：深海玄藍為體，乾燥霧櫻為星 === */
+  --user-bg-white:        #0C1117;
+  --user-bg-pink-pale:    #11161D;
+  --user-bg-pink-soft:    #141A21;
+  --user-bg-pink-deep:    #1D222B;
+  --user-bg-blockquote:   #12171E;
+  --user-active-line:     #10151B;
+  --user-canvas-bg:       #090C12;
+  --user-canvas-node:     #11161D;
 
-  /* === 文字 (霧櫻白與花蕊香檳金粗體，化解粉紅過載) === */
-  --user-text-main:        #F7EDF0;
-  --user-text-muted:       #C9B4BE;
-  --user-text-faint:       #858096;
-  --user-text-bold:        #F3D39C; /* 夜櫻燈火 / 花蕊香檳金 */
+  /* === 文字 (月白珍珠灰內文與微暖櫻白粗體，消除深藍底與多色撞色) === */
+  --user-text-main:        #D2D5DA;
+  --user-text-muted:       #8E949C;
+  --user-text-faint:       #5D626A;
+  --user-text-bold:        #EDE8EA;
 
-  /* === 標題漸層 (夜櫻粉濃淡) === */
-  --h1-gradient:           #F7B7CA;
-  --h2-gradient:           #EFA3BA;
-  --h3-gradient:           #E48FAA;
+  /* === 標題漸層 (低彩薄霧櫻白) === */
+  --h1-gradient:           #EFE0E5;
+  --h2-gradient:           #DEC2CB;
+  --h3-gradient:           #C9A5B1;
 
-  /* === 強調與連結 (櫻粉主軸 + 花蕊金與嫩葉青點綴) === */
-  --user-accent-main:      #EFA3BA;
-  --user-accent-strong:    #FF7FA3;
-  --user-accent-highlight: #3D293D;
+  /* === 強調與連結 (乾燥玫瑰櫻粉單一主軸 + 月光青灰外鏈) === */
+  --user-accent-main:      #D99BAE;
+  --user-accent-strong:    #D47A96;
+  --user-accent-highlight: rgba(217, 155, 174, 0.18);
 
-  --user-link-internal:    #8CD4BE; /* 夜露桃葉青 */
-  --user-link-external:    #9EC4F2; /* 月光冰藍 */
-  --link-unresolved-color: #7AA89C;
+  --user-link-internal:    #DDA2B4;
+  --user-link-external:    #9DB2CA;
+  --link-unresolved-color: #8C727B;
 
   /* === 介面 === */
-  --user-border-light:     #2A3F5E;
-  --user-selection:        rgba(239, 163, 186, 0.24);
-  --user-canvas-selection: #F7B7CA;
+  --user-border-light:     rgba(220, 232, 250, 0.075);
+  --user-selection:        rgba(217, 155, 174, 0.22);
+  --user-canvas-selection: #D99BAE;
 
   /* === Callout 專用色系 === */
-  --user-accent-tip:       #5FD4C4;
-  --user-accent-success:   #7BBF6A;
-  --user-accent-warning:   #F2B55A;
-  --user-accent-info:      #5A9BE0;
-  --user-accent-error:     #FF5C7A;
-  --user-accent-quote:     #A9B6C6;
-  --user-accent-example:   #B38CF0;
-  --user-accent-background: #D48AC8;
-  --user-callout-title:    #F7EDF0;
+  --user-accent-tip:       #6ABAB0;
+  --user-accent-success:   #7AA86E;
+  --user-accent-warning:   #CFA360;
+  --user-accent-info:      #6A96C4;
+  --user-accent-error:     #D46A82;
+  --user-accent-quote:     #94929B;
+  --user-accent-example:   #A388CF;
+  --user-accent-background: #BA7FB2;
+  --user-callout-title:    #EDE8EA;
 
-  --user-theme-pop:        #F3D39C;
+  --user-theme-pop:        #71767E;
 
-  --float-highlight: inset 0.6px 1px 0 0 rgba(255, 200, 220, 0.06);
-  --float-lowlight: inset -0.6px -1px 0 0 rgba(0, 0, 0, 0.5);
-  --float-shadow-1: 0 2px 3px rgba(0, 0, 0, 0.5);
-  --float-shadow-2: 0 6px 12px -3px rgba(0, 0, 0, 0.6);
+  --float-highlight: inset 0 1px 0 0 rgba(255, 225, 235, 0.06);
+  --float-lowlight: inset 0 -1px 0 0 rgba(0, 0, 0, 0.45);
+  --float-shadow-1: 0 2px 3px rgba(0, 0, 0, 0.48);
+  --float-shadow-2: 0 6px 12px -3px rgba(0, 0, 0, 0.58);
 
-  --canvas-float-highlight: inset 1px 2px 0 0 rgba(255, 200, 220, 0.08);
-  --canvas-float-lowlight: inset -1px -2px 0 0 rgba(0, 0, 0, 0.6);
-  --canvas-float-shadow-1: 0 2px 4px rgba(0, 0, 0, 0.6);
-  --canvas-float-shadow-2: 0 8px 16px rgba(0, 0, 0, 0.7);
+  --canvas-float-highlight: inset 0 1px 0 0 rgba(255, 225, 235, 0.07);
+  --canvas-float-lowlight: inset 0 -1px 0 0 rgba(0, 0, 0, 0.5);
+  --canvas-float-shadow-1: 0 2px 4px rgba(0, 0, 0, 0.5);
+  --canvas-float-shadow-2: 0 8px 16px rgba(0, 0, 0, 0.6);
 
-  /* HSL (桃粉互動按鈕 #E06D92) */
+  /* HSL (Muted Sakura Rose #D47A96) */
   --accent-h: 341;
-  --accent-s: 65%;
-  --accent-l: 65%;
+  --accent-s: 45%;
+  --accent-l: 62%;
 
   --interactive-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-  --interactive-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 8%));
+  --interactive-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 7%));
 
-  --user-inline-code-bg: #1A2D4A;
-  --user-inline-code-text: #FFB8CC;
+  --user-inline-code-bg: rgba(245, 238, 242, 0.055);
+  --user-inline-code-text: #DBAABB;
 
-  /* 標籤：花蕊香檳金光暈，呼應粗體與收合箭頭 */
-  --user-tag-color:            #F3D39C;
-  --user-tag-color-hover:      #FFE4B8;
-  --user-tag-background:       rgba(243, 211, 156, 0.15);
-  --user-tag-background-hover: rgba(243, 211, 156, 0.25);
+  /* 標籤：乾燥霧櫻微光 */
+  --user-tag-color:            #DCA8B9;
+  --user-tag-color-hover:      #E9C0CE;
+  --user-tag-background:       rgba(212, 122, 150, 0.13);
+  --user-tag-background-hover: rgba(212, 122, 150, 0.22);
 
   /* === Canvas Node Decoration === */
-  --canvas-red: 255, 100, 130;
-  --canvas-orange: 255, 160, 100;
-  --canvas-yellow: 255, 220, 110;
-  --canvas-green: 110, 200, 150;
-  --canvas-blue: 100, 170, 255;
-  --canvas-purple: 190, 150, 255;
+  --canvas-red: 220, 100, 125;
+  --canvas-orange: 220, 150, 105;
+  --canvas-yellow: 225, 200, 115;
+  --canvas-green: 110, 180, 145;
+  --canvas-blue: 110, 165, 220;
+  --canvas-purple: 175, 145, 220;
 }
 
 
@@ -1294,6 +1293,16 @@ strong, b, .cm-strong {
 ol > li::marker {
   color: var(--user-accent-main);
   font-weight: bold;
+}
+
+.theme-dark:is(
+  .rws-palette-nordic-espresso,
+  .rws-palette-imperial-forest,
+  .rws-palette-jade-agarwood,
+  .rws-palette-ink-cinnabar,
+  .rws-palette-peach-blossom
+) :is(.list-bullet:after, .cm-formatting-list-ul, .cm-formatting-list-ol, ol > li::marker) {
+  color: color-mix(in srgb, var(--user-accent-main) 62%, var(--user-text-faint));
 }
 
 /* 連結懸停 */
@@ -1439,6 +1448,26 @@ body.theme-dark ::-webkit-scrollbar-thumb {
 
 body.theme-light ::-webkit-scrollbar-thumb:hover,
 body.theme-dark ::-webkit-scrollbar-thumb:hover {
+  background-color: var(--user-accent-main);
+}
+
+body.theme-dark:is(
+  .rws-palette-nordic-espresso,
+  .rws-palette-imperial-forest,
+  .rws-palette-jade-agarwood,
+  .rws-palette-ink-cinnabar,
+  .rws-palette-peach-blossom
+) ::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+body.theme-dark:is(
+  .rws-palette-nordic-espresso,
+  .rws-palette-imperial-forest,
+  .rws-palette-jade-agarwood,
+  .rws-palette-ink-cinnabar,
+  .rws-palette-peach-blossom
+) ::-webkit-scrollbar-thumb:hover {
   background-color: var(--user-accent-main);
 }
 
