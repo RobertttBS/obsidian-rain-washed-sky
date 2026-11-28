@@ -58,6 +58,7 @@ Each palette is built from two colors, A and B. Dark mode swaps their roles.
 Examples already in the theme:
 
 - Rain-Washed Sky: light uses a Ru-ware celadon base (`#F6F7F2`, leaning ivory) with blue-and-white accents (`#346c9c`). Dark uses a deep blue base (`#0F1626`) with celadon accents (`#7CC5C5`).
+- Nordic Espresso: light uses an oat-cream base (`#FAF8F5`) with Nordic fjord-blue accents (`#4A7298`). Dark uses a deep fjord-blue base (`#0B1017`) with oat-foam accents (`#D4C3AE`).
 - Peach Blossom: light uses a pink base (`#FDF7F3`, leaning ivory) with a navy accent (`#2B4C7E`). Dark uses a navy base (`#0E1A2B`) with a pink accent (`#EFA3BA`).
 
 Do not swap these. Keep the same hue in both modes and change only the lightness:
@@ -65,7 +66,9 @@ Do not swap these. Keep the same hue in both modes and change only the lightness
 - `--user-accent-strong`: emphasis and alerts only.
 - Callout colors: `--user-accent-tip`, `--user-accent-success`, `--user-accent-warning`, `--user-accent-info`, `--user-accent-error`, `--user-accent-quote`, `--user-accent-example`, `--user-accent-background`.
 
-Nordic Espresso predates this rule. It keeps the same blue accent in both modes. Do not copy it for new palettes.
+Exception:
+
+- Ink & Cinnabar (`rws-palette-ink-cinnabar`) does not swap base and accent. Both light and dark modes use monochrome ink grayscale for bases, text, and headings, with cinnabar red strictly as a seal accent.
 
 ### Structure
 
